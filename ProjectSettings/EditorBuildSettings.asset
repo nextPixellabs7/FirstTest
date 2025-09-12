@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Escenas/Menu.unity
     guid: 28d48e5f8b6924c4383e3771d42e53ce
   - enabled: 1
-    path: Assets/Assets/Scenes/SampleScene.unity
-    guid: 55daccc09a3b69647bbab145b54a3ab3
+    path: Assets/Escenas/Parejas.unity
+    guid: be88d6e5fccf50c41a62f2d0f8831612
+  - enabled: 1
+    path: Assets/Escenas/LEGO.unity
+    guid: f049be0e90721e046bf9041a7089ed4d
+  - enabled: 1
+    path: Assets/Escenas/Sonidos.unity
+    guid: 921e11e58e7c78a46a84d06b7d763493
+  - enabled: 1
+    path: Assets/Escenas/Pompones.unity
+    guid: cbfb731a0176de14da3dd4bc7b64b6b6
+  - enabled: 1
+    path: Assets/Escenas/Ordenar.unity
+    guid: e666ce43918ae7942ac23370a3375007
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}

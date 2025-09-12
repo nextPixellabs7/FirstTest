@@ -6,12 +6,12 @@ public class UserLogIn : MonoBehaviour
     public TMP_InputField nombre;
     public GameManager GM;
     public TextMeshProUGUI bienvenido;
-    private string name;
+    private string newName;
 
     public void setName()
     {
-        name = nombre.text;
-        GM.SetText(name);
+        newName = nombre.text;
+        GM.SetText(newName);
         bienvenido.text= ("Bienvenido\n" + GM.GetText());
     }
 }

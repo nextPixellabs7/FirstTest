@@ -11,7 +11,11 @@ public class UserLogIn : MonoBehaviour
     public void setName()
     {
         newName = nombre.text;
-        GM.SetText(newName);
-        bienvenido.text= ("Bienvenido\n" + GM.GetText());
+        if(newName != "")
+        {
+            GM.SetText(newName);
+            bienvenido.text = ("Bienvenido\n" + GM.GetText());
+        }
+        
     }
 }

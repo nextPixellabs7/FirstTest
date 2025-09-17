@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
-  - Card
+  - Meteor
+  - CardGrab
+  - CardSelect
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,11 @@ TagManager:
   - Meteor
   - CardGrab
   - CardSelect
+  - Card
+  - SmallPompon
+  - BigPompon
+  - CanastaGrande
+  - CanastaChica
   layers:
   - Default
   - TransparentFX

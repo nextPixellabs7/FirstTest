@@ -128,9 +128,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4882034}
+  - component: {fileID: 4882035}
+  - component: {fileID: 4882036}
   m_Layer: 0
   m_Name: CanastaSmall
-  m_TagString: Untagged
+  m_TagString: CanastaChica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +153,52 @@ Transform:
   - {fileID: 963348812}
   m_Father: {fileID: 2073411303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4882035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4882033}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8661895, y: 0.06508386, z: 0.5830345}
+  m_Center: {x: -1.5084486, y: 0.9192584, z: 4.5609465}
+--- !u!114 &4882036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4882033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed3cb0d7e807fd43abc4fefc178db74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PomponGame
+  TextoBig: {fileID: 785646850}
+  TextoSmall: {fileID: 1107698340}
+  TextoTitulo: {fileID: 1219300577}
+--- !u!1 &91665244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+  m_PrefabInstance: {fileID: 2961151095487025731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &159051105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+  m_PrefabInstance: {fileID: 964002033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &159868880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249,6 +297,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6777817774531248445, guid: fea2cf78a76e43b4faeb98e09dfdd98f, type: 3}
   m_PrefabInstance: {fileID: 159868880}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &163365754 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4535115652936018164, guid: 716ba70590f4b044d83d5427046821b4, type: 3}
+  m_PrefabInstance: {fileID: 1852513057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &164445686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+  m_PrefabInstance: {fileID: 1098708836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &333853527
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,9 +349,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2052387716}
     m_Modifications:
+    - target: {fileID: 2107478912064519660, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fff8eb33283c8134e94da457bd550758, type: 2}
     - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_Name
       value: PomponBig (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: m_TagString
+      value: BigPompon
       objectReference: {fileID: 0}
     - target: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -338,13 +404,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 426899201}
   m_SourcePrefab: {fileID: 100100000, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
 --- !u!4 &340917444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
   m_PrefabInstance: {fileID: 340917443}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &426899197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+  m_PrefabInstance: {fileID: 340917443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &426899201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426899197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2160d6211c108c848bbf94fe4de26ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigPomon
+  size: 
+  correcta: 0
 --- !u!1001 &444264937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -393,14 +481,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4719547376797722002, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fff8eb33283c8134e94da457bd550758, type: 2}
     - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
       propertyPath: m_Name
       value: PomponSmall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: m_TagString
+      value: SmallPompon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1499790099}
   m_SourcePrefab: {fileID: 100100000, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
 --- !u!4 &444264938 stripped
 Transform:
@@ -455,14 +554,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4719547376797722002, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a0b4c2aee6797945bd8093a21db6e76, type: 2}
     - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
       propertyPath: m_Name
       value: PomponSmall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: m_TagString
+      value: SmallPompon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1773686578}
   m_SourcePrefab: {fileID: 100100000, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
 --- !u!4 &521442209 stripped
 Transform:
@@ -547,6 +657,185 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2209216402641801725, guid: ff7ce2281a8c8bd47a0315fedd14c5fe, type: 3}
   m_PrefabInstance: {fileID: 546699393}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &557307502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 557307503}
+  m_Layer: 5
+  m_Name: UI Juego
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &557307503
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557307502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1107698339}
+  - {fileID: 1219300576}
+  - {fileID: 785646849}
+  m_Father: {fileID: 163365754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &685993252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+  m_PrefabInstance: {fileID: 399152857096286483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &785646848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785646849}
+  - component: {fileID: 785646851}
+  - component: {fileID: 785646850}
+  m_Layer: 5
+  m_Name: Texto Grande
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &785646849
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785646848}
+  m_LocalRotation: {x: 1.1641532e-10, y: 0.952315, z: -0.3051169, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -44.515}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 557307503}
+  m_LocalEulerAnglesHint: {x: 35.53, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -37.277, y: -7.91}
+  m_SizeDelta: {x: 350.492, y: 84.28}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &785646850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785646848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Canasta de pompones grandes
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 29.6
+  m_fontSizeBase: 29.6
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &785646851
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785646848}
+  m_CullTransparentMesh: 1
 --- !u!1001 &807304562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -604,6 +893,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d019711386bde4bb05883f82a194ce, type: 3}
+--- !u!1 &840631988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+  m_PrefabInstance: {fileID: 1658561303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &907639109
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,6 +1036,7 @@ GameObject:
   - component: {fileID: 919821029}
   - component: {fileID: 919821028}
   - component: {fileID: 919821027}
+  - component: {fileID: 919821030}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -810,6 +1105,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &919821030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919821026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab68ce6587aab0146b8dabefbd806791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.XRUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_ClickSpeed: 0.3
+  m_MoveDeadzone: 0.6
+  m_RepeatDelay: 0.5
+  m_RepeatRate: 0.1
+  m_TrackedDeviceDragThresholdMultiplier: 2
+  m_TrackedScrollDeltaMultiplier: 5
+  m_BypassUIToolkitEvents: 0
+  m_ActiveInputMode: 0
+  m_EnableXRInput: 1
+  m_EnableMouseInput: 1
+  m_EnableTouchInput: 1
+  m_EnableGamepadInput: 1
+  m_EnableJoystickInput: 1
+  m_PointAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_NavigateAction: {fileID: 0}
+  m_SubmitAction: {fileID: 0}
+  m_CancelAction: {fileID: 0}
+  m_EnableBuiltinActionsAsFallback: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
 --- !u!4 &963348812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6777817774531248445, guid: fea2cf78a76e43b4faeb98e09dfdd98f, type: 3}
@@ -863,20 +1197,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4719547376797722002, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f89ee132a5a6c141b04cc34d2666d7c, type: 2}
     - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
       propertyPath: m_Name
       value: PomponSmall
       objectReference: {fileID: 0}
+    - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: m_TagString
+      value: SmallPompon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 964002039}
   m_SourcePrefab: {fileID: 100100000, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
 --- !u!4 &964002034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4008556452707553648, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
   m_PrefabInstance: {fileID: 964002033}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &964002039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159051105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5505f6b2d3d1b44b580ab5a8362f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmallPompon
+  size: 
+  correcta: 0
+  size: Small
 --- !u!1001 &1098708836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -925,19 +1285,191 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4719547376797722002, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a0b4c2aee6797945bd8093a21db6e76, type: 2}
     - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
       propertyPath: m_Name
       value: PomponSmall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: m_TagString
+      value: SmallPompon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1098708842}
   m_SourcePrefab: {fileID: 100100000, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
 --- !u!4 &1098708837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4008556452707553648, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
   m_PrefabInstance: {fileID: 1098708836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1098708842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164445686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5505f6b2d3d1b44b580ab5a8362f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmallPompon
+  size: 
+  correcta: 0
+  size: Small
+--- !u!1 &1106281174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+  m_PrefabInstance: {fileID: 1562252030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1107698338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107698339}
+  - component: {fileID: 1107698341}
+  - component: {fileID: 1107698340}
+  m_Layer: 5
+  m_Name: Texto Chico
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1107698339
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107698338}
+  m_LocalRotation: {x: 1.1641532e-10, y: 0.952315, z: -0.3051169, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -44.777}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 557307503}
+  m_LocalEulerAnglesHint: {x: 35.53, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.964, y: -7.542}
+  m_SizeDelta: {x: 317.481, y: 70.697}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1107698340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107698338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Canasta de pompones chicos
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 29.6
+  m_fontSizeBase: 29.6
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1107698341
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107698338}
+  m_CullTransparentMesh: 1
+--- !u!1 &1118301538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+  m_PrefabInstance: {fileID: 2008860085}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1158618587
 PrefabInstance:
@@ -1196,6 +1728,172 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d79f9fd7501c264eaabcf2287ca1c82, type: 3}
+--- !u!1 &1195245911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+  m_PrefabInstance: {fileID: 1508487705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1219300575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1219300576}
+  - component: {fileID: 1219300578}
+  - component: {fileID: 1219300577}
+  m_Layer: 5
+  m_Name: Texto Titulo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1219300576
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219300575}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -50.29}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 557307503}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -17.8, y: 0.47}
+  m_SizeDelta: {x: 246.55, y: 69.971}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1219300577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219300575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\xA1Bienvenido!"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1219300578
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219300575}
+  m_CullTransparentMesh: 1
+--- !u!1 &1289300138 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+  m_PrefabInstance: {fileID: 2144400223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1499790094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+  m_PrefabInstance: {fileID: 444264937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1499790099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499790094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5505f6b2d3d1b44b580ab5a8362f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmallPompon
+  size: 
+  correcta: 0
+  size: Small
 --- !u!1001 &1508487705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1204,9 +1902,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2052387716}
     m_Modifications:
+    - target: {fileID: 2107478912064519660, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ed177ccca4b8fe45857483737ca67bf, type: 2}
     - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_Name
       value: PomponBig (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: m_TagString
+      value: BigPompon
       objectReference: {fileID: 0}
     - target: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1251,13 +1957,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1508487710}
   m_SourcePrefab: {fileID: 100100000, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
 --- !u!4 &1508487706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
   m_PrefabInstance: {fileID: 1508487705}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1508487710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195245911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2160d6211c108c848bbf94fe4de26ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigPomon
+  size: 
+  correcta: 0
 --- !u!1001 &1562252030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1306,25 +2029,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4719547376797722002, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: fff8eb33283c8134e94da457bd550758, type: 2}
     - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
       propertyPath: m_Name
       value: PomponSmall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: m_TagString
+      value: SmallPompon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1562252036}
   m_SourcePrefab: {fileID: 100100000, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
 --- !u!4 &1562252031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4008556452707553648, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
   m_PrefabInstance: {fileID: 1562252030}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1562252036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106281174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5505f6b2d3d1b44b580ab5a8362f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmallPompon
+  size: 
+  correcta: 0
+  size: Small
 --- !u!4 &1603007387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4008556452707553648, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
   m_PrefabInstance: {fileID: 2961151095487025731}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1603007392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91665244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5505f6b2d3d1b44b580ab5a8362f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmallPompon
+  size: 
+  correcta: 0
+  size: Small
 --- !u!1001 &1658561303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1333,9 +2097,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2052387716}
     m_Modifications:
+    - target: {fileID: 2107478912064519660, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f89ee132a5a6c141b04cc34d2666d7c, type: 2}
     - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_Name
       value: PomponBig (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: m_TagString
+      value: BigPompon
       objectReference: {fileID: 0}
     - target: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1380,13 +2152,50 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1658561308}
   m_SourcePrefab: {fileID: 100100000, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
 --- !u!4 &1658561304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
   m_PrefabInstance: {fileID: 1658561303}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1658561308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840631988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2160d6211c108c848bbf94fe4de26ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigPomon
+  size: 
+  correcta: 0
+--- !u!1 &1773686573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+  m_PrefabInstance: {fileID: 521442208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1773686578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773686573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5505f6b2d3d1b44b580ab5a8362f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmallPompon
+  size: 
+  correcta: 0
+  size: Small
 --- !u!1001 &1852513057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1485,7 +2294,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4535115652936018164, guid: 716ba70590f4b044d83d5427046821b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 557307503}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716ba70590f4b044d83d5427046821b4, type: 3}
 --- !u!1 &1902167946
@@ -1529,9 +2341,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1929752760}
+  - component: {fileID: 1929752761}
+  - component: {fileID: 1929752762}
   m_Layer: 0
   m_Name: CanastaBig
-  m_TagString: Untagged
+  m_TagString: CanastaGrande
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1552,6 +2366,42 @@ Transform:
   - {fileID: 159868881}
   m_Father: {fileID: 2073411303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1929752761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929752759}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.89116526, y: 0.08975923, z: 0.5785141}
+  m_Center: {x: 1.5660927, y: 0.8841166, z: 4.5468874}
+--- !u!114 &1929752762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929752759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed3cb0d7e807fd43abc4fefc178db74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PomponGame
+  TextoBig: {fileID: 785646850}
+  TextoSmall: {fileID: 1107698340}
+  TextoTitulo: {fileID: 1219300577}
 --- !u!1001 &1965404863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1658,9 +2508,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2052387716}
     m_Modifications:
+    - target: {fileID: 2107478912064519660, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a0b4c2aee6797945bd8093a21db6e76, type: 2}
     - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_Name
       value: PomponBig (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: m_TagString
+      value: BigPompon
       objectReference: {fileID: 0}
     - target: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1705,13 +2563,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2008860090}
   m_SourcePrefab: {fileID: 100100000, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
 --- !u!4 &2008860086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
   m_PrefabInstance: {fileID: 2008860085}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2008860090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118301538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2160d6211c108c848bbf94fe4de26ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigPomon
+  size: 
+  correcta: 0
 --- !u!1 &2052387715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,9 +2672,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2052387716}
     m_Modifications:
+    - target: {fileID: 2107478912064519660, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f89ee132a5a6c141b04cc34d2666d7c, type: 2}
     - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_Name
       value: PomponBig (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: m_TagString
+      value: BigPompon
       objectReference: {fileID: 0}
     - target: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1844,13 +2727,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2144400228}
   m_SourcePrefab: {fileID: 100100000, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
 --- !u!4 &2144400224 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
   m_PrefabInstance: {fileID: 2144400223}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2144400228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289300138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2160d6211c108c848bbf94fe4de26ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigPomon
+  size: 
+  correcta: 0
 --- !u!1001 &399152857096286483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1859,9 +2759,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2052387716}
     m_Modifications:
+    - target: {fileID: 2107478912064519660, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a0f421d9e7a7a346a5e60b29bac894e, type: 2}
     - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_Name
       value: PomponBig
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      propertyPath: m_TagString
+      value: BigPompon
       objectReference: {fileID: 0}
     - target: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1906,13 +2814,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 399152857096286488}
   m_SourcePrefab: {fileID: 100100000, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
 --- !u!4 &399152857096286484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
   m_PrefabInstance: {fileID: 399152857096286483}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &399152857096286488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685993252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2160d6211c108c848bbf94fe4de26ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigPomon
+  size: 
+  correcta: 0
 --- !u!1001 &1221003911896391929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2018,14 +2943,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4719547376797722002, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ed177ccca4b8fe45857483737ca67bf, type: 2}
     - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
       propertyPath: m_Name
       value: PomponSmall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      propertyPath: m_TagString
+      value: SmallPompon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1603007392}
   m_SourcePrefab: {fileID: 100100000, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
 --- !u!1001 &6292770618398340761
 PrefabInstance:

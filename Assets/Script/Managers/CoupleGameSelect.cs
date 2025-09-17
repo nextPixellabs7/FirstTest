@@ -19,7 +19,6 @@ public class CoupleGameSelect : MonoBehaviour
     // Funcion que sera ejecutada si se selecciona la carta
     public void CartaSeleccionada(SelectEnterEventArgs args)
     {
-        bool estaVolteada= false;
         GameObject cartaGO = args.interactableObject.transform.gameObject;
 
         // Se gira la carta

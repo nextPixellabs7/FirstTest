@@ -3,95 +3,82 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class PomponGame : MonoBehaviour
 {
     private List<Pompon> SmallPompones = new List<Pompon>();
     private List<Pompon> BigPompones = new List<Pompon>();
+
     public TextMeshProUGUI TextoBig;
     public TextMeshProUGUI TextoSmall;
     public TextMeshProUGUI TextoTitulo;
 
     private void Start()
     {
-
+        GameObject[] Bpompon = GameObject.FindGameObjectsWithTag("BigPompon");
+        GameObject[] Spompon = GameObject.FindGameObjectsWithTag("SmallPompon");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Pompon pompon = other.GetComponent<Pompon>();
-        
+        if (pompon == null) return;
 
         if (pompon.GetSize() == "Small" && gameObject.CompareTag("CanastaChica"))
         {
             pompon.setCorrecta(true);
-            StartCoroutine(MostrarTexto(pompon.estaCorrecta(), 5f));
-            other.GetComponent<Collider>().enabled = false;
+            StartCoroutine(MostrarTexto(pompon.estaCorrecta(), 5f, pompon.GetSize()));
+            other.GetComponent<XRGrabInteractable>().enabled = false;
             SmallPompones.Add(pompon);
-            CanastaTerminada(pompon.GetSize());
         }
         else if(pompon.GetSize() == "Big" && gameObject.CompareTag("CanastaGrande"))
         {
             pompon.setCorrecta(true);
-            StartCoroutine(MostrarTexto(pompon.estaCorrecta(), 5f));
-            other.GetComponent<Collider>().enabled = false;
+            StartCoroutine(MostrarTexto(pompon.estaCorrecta(), 5f, pompon.GetSize()));
+            other.GetComponent<XRGrabInteractable>().enabled = false;
             BigPompones.Add(pompon);
-            CanastaTerminada(pompon.GetSize());
         }
         else
         {
-            MostrarTexto(pompon.estaCorrecta() ,5f);
+            MostrarTexto(pompon.estaCorrecta() ,5f, pompon.GetSize());
         }
+
+
+        CanastaTerminada();
     }
 
-    private void CanastaTerminada(string size)
+    private void CanastaTerminada()
     {
-        int correctas = 0;
-
-        if (size == "Big")
-        {
-            foreach(Pompon p in BigPompones)
-            {
-                correctas++;;
-            }
-        }
-        else if(size == "Small")
-        {
-            foreach(Pompon p in SmallPompones)
-            {
-                correctas++;
-            }
-        }
-
-        int Todos = BigPompones.Count + SmallPompones.Count;
-
-        if(correctas == Todos)
+        if(12 == BigPompones.Count + SmallPompones.Count)
         {
             TextoTitulo.text = "¡Felicidades, lo has completado!";
         }
     }
 
-    IEnumerator MostrarTexto(bool correcto,float duracion)
+    IEnumerator MostrarTexto(bool correcto,float duracion, string size)
     {
-
-
         if (correcto)
         {
-            if (duracion < 5f)
+            if (size == "Big")
             {
-                TextoSmall.text = "¡Correcto!";
                 TextoBig.text = "¡Correcto!";
             }
+            else
+            {
+                TextoSmall.text = "¡Correcto!";
+            }
+            
+            
         }
         else
         {
-            if (duracion < 5f)
-            {
-                TextoSmall.text = "¡Te has equivocado!";
-                TextoBig.text = "¡Te has equivocado!";
-            }
+            TextoSmall.text = "¡Te has equivocado!";
+            TextoBig.text = "¡Te has equivocado!";
         }
-        yield return null;
+        yield return new WaitForSeconds(duracion);
+        TextoSmall.text = "Canasta de pompones chicos";
+        TextoBig.text = "Canasta de pompones grandes";
     }
 
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using System.Linq;
 using UnityEngine.XR.Interaction.Toolkit;
+using Unity.Android.Gradle.Manifest;
 
 public class CoupleGameSelect : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class CoupleGameSelect : MonoBehaviour
     void Start()
     {
         cartas = GameObject.FindGameObjectsWithTag("CardSelect");
+        foreach (var c in cartas) Debug.Log(c.name);
     }
 
     // Funcion que sera ejecutada si se selecciona la carta
@@ -29,7 +31,7 @@ public class CoupleGameSelect : MonoBehaviour
     void VerificarVolteadas()
     {
         List<CardFather> volteadas = new List<CardFather>();
-
+        
         foreach (GameObject go in cartas)
         {
             CardFather carta = go.GetComponent<CardFather>();
@@ -46,6 +48,7 @@ public class CoupleGameSelect : MonoBehaviour
         if (volteadas.Count == 2)
         {
             RevisarParejas(volteadas);
+            volteadas.Clear();
         }
     }
 
@@ -77,6 +80,7 @@ public class CoupleGameSelect : MonoBehaviour
             }
             else
             {
+                texto.text = "¡No eran una pareja!";
                 StartCoroutine(GirarCartaYVerificar(c1, 1f));
                 StartCoroutine(GirarCartaYVerificar(c2, 1f));
             }
@@ -85,8 +89,7 @@ public class CoupleGameSelect : MonoBehaviour
 
     bool JuegoCompletado()
     {
-        int correctas = 0;
-
+        List<CardFather> correctas = new List<CardFather>();
         foreach (GameObject go in cartas)
         {
             CardFather carta = go.GetComponent<CardFather>();
@@ -96,11 +99,12 @@ public class CoupleGameSelect : MonoBehaviour
 
             if (correcta)
             {
-                correctas++;
+                correctas.Add(carta);
+                Debug.Log(correctas);
             }
         }
 
-        if (correctas == cartas.Length)
+        if (correctas.Count == cartas.Length)
         {
             return true;
         }

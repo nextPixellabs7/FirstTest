@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7905102233589790501}
   - component: {fileID: 4719547376797722002}
   - component: {fileID: 8754997660754570528}
-  - component: {fileID: 3891650244375913315}
   - component: {fileID: 3131161696446540729}
   - component: {fileID: 1325155937549112025}
   m_Layer: 0
@@ -114,18 +113,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3891650244375913315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8415777265812721022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5505f6b2d3d1b44b580ab5a8362f91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SmallPompon
 --- !u!114 &3131161696446540729
 MonoBehaviour:
   m_ObjectHideFlags: 0

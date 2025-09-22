@@ -13,6 +13,12 @@ TagManager:
   - BigPompon
   - CanastaGrande
   - CanastaChica
+  - Cubo
+  - Esfera
+  - Cilindro
+  - CubeZone
+  - CircleZone
+  - CylinderZone
   layers:
   - Default
   - TransparentFX

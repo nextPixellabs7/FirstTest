@@ -181,7 +181,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4882033}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ed3cb0d7e807fd43abc4fefc178db74, type: 3}
   m_Name: 
@@ -457,7 +457,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3520660345042941556, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -707,7 +708,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SmallPompon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3891650244375913315, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -786,7 +788,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SmallPompon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3891650244375913315, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1372,13 +1375,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 964002036}
   m_SourcePrefab: {fileID: 100100000, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
 --- !u!4 &964002034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4008556452707553648, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
   m_PrefabInstance: {fileID: 964002033}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &964002035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8415777265812721022, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
+  m_PrefabInstance: {fileID: 964002033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &964002036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964002035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5505f6b2d3d1b44b580ab5a8362f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmallPompon
 --- !u!1001 &1098708836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1439,7 +1462,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SmallPompon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3891650244375913315, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2147,7 +2171,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3520660345042941556, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2392,7 +2417,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SmallPompon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3891650244375913315, guid: e13ed768a2bf8e1429377c25dc0b00e3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2808,7 +2834,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3520660345042941556, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3370,7 +3397,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929752759}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ed3cb0d7e807fd43abc4fefc178db74, type: 3}
   m_Name: 
@@ -3926,7 +3953,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3520660345042941556, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4166,13 +4194,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 399152857096286486}
   m_SourcePrefab: {fileID: 100100000, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
 --- !u!4 &399152857096286484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7773555359857707278, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
   m_PrefabInstance: {fileID: 399152857096286483}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &399152857096286485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2921340166529324288, guid: 95e2744b479f84f459b03b620621dc18, type: 3}
+  m_PrefabInstance: {fileID: 399152857096286483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &399152857096286486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399152857096286485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2160d6211c108c848bbf94fe4de26ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BigPomon
 --- !u!1001 &1221003911896391929
 PrefabInstance:
   m_ObjectHideFlags: 0

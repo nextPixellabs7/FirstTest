@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using TMPro;
 using System.Linq;
 using UnityEngine.XR.Interaction.Toolkit;
-using Unity.Android.Gradle.Manifest;
 
 public class CoupleGameSelect : MonoBehaviour
 {

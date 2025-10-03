@@ -5,14 +5,6 @@ public class CheckCard : CardFather
 {
     void Start()
     {
-        MirandoArriba = false;
-        ID = 1;
+        SetIDCard(1);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
 }

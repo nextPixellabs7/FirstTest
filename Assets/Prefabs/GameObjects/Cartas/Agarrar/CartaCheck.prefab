@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7700741696901668388}
   m_Layer: 0
   m_Name: CartaCheck
-  m_TagString: Card
+  m_TagString: CardGrab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,6 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5957207344470730766}
+  - {fileID: 2190675065596353937}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7220401942823577276
@@ -137,7 +138,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -214,7 +215,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 2190675065596353937}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
@@ -281,8 +282,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5824672935112cf4890a5c7653e6bfcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckCard
-  toleranciaGrados: 10
-  MirandoArriba: 0
+  id: 0
+  correcta: 0
+  flipAxis: 1
+  faceToleranceDeg: 12
+  DuracionGiro: 0.25
+  faceDownAngle: 0
+  faceUpAngle: 180
 --- !u!1 &2794499993268252111
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +486,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6423584767293529861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2190675065596353937}
+  m_Layer: 0
+  m_Name: AttachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2190675065596353937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423584767293529861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4681426930385326380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1247213422847943376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -534,6 +571,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5209242958166284438, guid: 7edda351007fa204fb39f2d9b76486c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2190675065596353937}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7edda351007fa204fb39f2d9b76486c0, type: 3}

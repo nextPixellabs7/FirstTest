@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 9115337986818988874}
   m_Layer: 0
   m_Name: CartaCross
-  m_TagString: Card
+  m_TagString: CardGrab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,6 +233,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4942984365743054607}
+  - {fileID: 8902572981895007287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3442973776198127546
@@ -334,7 +335,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -411,7 +412,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 8902572981895007287}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
@@ -478,8 +479,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6630f3a9c2216b646aec261524fc7e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossCard
-  toleranciaGrados: 10
-  MirandoArriba: 0
+  id: 0
+  correcta: 0
+  flipAxis: 1
+  faceToleranceDeg: 12
+  DuracionGiro: 0.25
+  faceDownAngle: 0
+  faceUpAngle: 180
+--- !u!1 &8241292954083762693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8902572981895007287}
+  m_Layer: 0
+  m_Name: AttachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8902572981895007287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8241292954083762693}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1964241708586185565}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7499635431098086461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -535,6 +572,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5209242958166284438, guid: 1a9c00983381883498ddb56bc434e058, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8902572981895007287}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a9c00983381883498ddb56bc434e058, type: 3}

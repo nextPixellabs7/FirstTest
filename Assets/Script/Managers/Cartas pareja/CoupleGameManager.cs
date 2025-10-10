@@ -5,7 +5,7 @@ using TMPro;
 using System.Linq;
 using UnityEditor.Experimental.GraphView;
 
-public class CoupleGame : MonoBehaviour
+public class CoupleGameManager : MonoBehaviour
 {
 
     [Header("UI")]

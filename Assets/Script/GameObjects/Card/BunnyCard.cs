@@ -4,7 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections.Generic;
 
-public class CrossCard : CardFather
+public class BunnyCard : CardFather
 {
     void Start()
     {

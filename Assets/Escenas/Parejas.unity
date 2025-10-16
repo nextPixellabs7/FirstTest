@@ -1165,12 +1165,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 837951606}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &841054678 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7429843279342745704, guid: 34a6a6864719a1a48a191cb73c73d2fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 437480253901298994}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &841054679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7883040034555399926, guid: 34a6a6864719a1a48a191cb73c73d2fc,
@@ -2145,6 +2139,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8182806698953455535, guid: 34a6a6864719a1a48a191cb73c73d2fc,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f60c27ccfeaf5394290ef874c5952377, type: 2}
     m_RemovedComponents:
     - {fileID: 762630197733848744, guid: 34a6a6864719a1a48a191cb73c73d2fc, type: 3}
     m_RemovedGameObjects: []
@@ -3082,7 +3081,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 57ba9118a0443b74dac68085ea2f5a8c, type: 2}
+  - {fileID: 2100000, guid: 339fbf27a2455ab41939f3c78ae8d9b4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3154,7 +3153,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 369841175}
     m_Modifications:
-    - target: {fileID: 762630197733848744, guid: 34a6a6864719a1a48a191cb73c73d2fc,
+    - target: {fileID: 1427425851748338552, guid: 34a6a6864719a1a48a191cb73c73d2fc,
         type: 3}
       propertyPath: interactionManager
       value: 
@@ -3178,11 +3177,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3059914503025961257, guid: 34a6a6864719a1a48a191cb73c73d2fc,
-        type: 3}
-      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3059914503025961257, guid: 34a6a6864719a1a48a191cb73c73d2fc,
         type: 3}
@@ -3213,11 +3207,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Soporte
-      objectReference: {fileID: 0}
-    - target: {fileID: 7429843279342745704, guid: 34a6a6864719a1a48a191cb73c73d2fc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7883040034555399926, guid: 34a6a6864719a1a48a191cb73c73d2fc,
         type: 3}
@@ -3269,15 +3258,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 762630197733848744, guid: 34a6a6864719a1a48a191cb73c73d2fc, type: 3}
+    - target: {fileID: 8182806698953455535, guid: 34a6a6864719a1a48a191cb73c73d2fc,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f60c27ccfeaf5394290ef874c5952377, type: 2}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7429843279342745704, guid: 34a6a6864719a1a48a191cb73c73d2fc,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 437480253901299001}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34a6a6864719a1a48a191cb73c73d2fc, type: 3}
 --- !u!4 &437480253901298995 stripped
 Transform:
@@ -3285,33 +3274,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 437480253901298994}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &437480253901298997 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3059914503025961257, guid: 34a6a6864719a1a48a191cb73c73d2fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 437480253901298994}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841054678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
---- !u!114 &437480253901299001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841054678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5d2a2f4b3fc4bc46acf6d6b3db89594, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SocketAutosnapGate
-  socket: {fileID: 437480253901298997}
-  interactionManager: {fileID: 1565479428}
-  ignoreExistingOnOpen: 1
 --- !u!1001 &1221003911896391929
 PrefabInstance:
   m_ObjectHideFlags: 0

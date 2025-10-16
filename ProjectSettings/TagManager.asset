@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Ignite
   - Anchor
+  - BigPompon
+  - SmallPompon
+  - CardSelect
+  - Nivel1
+  - Nivel2
+  - Nivel3
   layers:
   - Default
   - TransparentFX

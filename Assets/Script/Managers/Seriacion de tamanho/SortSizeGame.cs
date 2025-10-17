@@ -1,12 +1,13 @@
-using NUnit.Framework;
 using System;
+using System.Net.Sockets;
 using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
-public class SoundsGameManager : MonoBehaviour
+public class SortSizeGame : MonoBehaviour
 {
 
     [Header("Spawn inicial del jugador")]
@@ -27,8 +28,8 @@ public class SoundsGameManager : MonoBehaviour
         [Header("Orden esperado")]
         public int[] nivelX;
 
-        [Header("Cartas disponibles de este nivel")]
-        public SoundCardFather[] cards;
+        [Header("Objetos disponibles de este nivel")]
+        public ObjectSort[] cards;
 
         [Header("Posicion del siguiente nivel")]
         public Transform spawnPoint;
@@ -39,7 +40,6 @@ public class SoundsGameManager : MonoBehaviour
     [Header("Niveles")]
     [SerializeField] private level[] levels;
     private int nivelActual = 0;
-
 
     private void Awake()
     {
@@ -58,7 +58,7 @@ public class SoundsGameManager : MonoBehaviour
                 continue;
             }
 
-            foreach(var s in lvl.sockets)
+            foreach (var s in lvl.sockets)
             {
                 if (s == null)
                 {
@@ -70,20 +70,7 @@ public class SoundsGameManager : MonoBehaviour
         }
 
         //socket = GetComponent<XRSocketInteractor>();
-    }
 
-    private void OnDestroy()
-    {
-        // Limpieza
-        foreach (var lvl in levels)
-        {
-            if (lvl?.sockets == null) continue;
-            foreach (var s in lvl.sockets)
-            {
-                if (s == null) continue;
-                s.selectEntered.RemoveListener(OnSocketSelectEntered);
-            }
-        }
     }
 
     public void EntroEnSocket(SelectEnterEventArgs args) => OnSocketSelectEntered(args);
@@ -91,12 +78,12 @@ public class SoundsGameManager : MonoBehaviour
     void OnSocketSelectEntered(SelectEnterEventArgs args)
     {
         var socket = args.interactorObject as XRSocketInteractor;
-        var cardGO = args.interactableObject.transform.gameObject;
-        SoundCardFather card = cardGO.GetComponent<SoundCardFather>();
+        var objGO = args.interactableObject.transform.gameObject;
+        ObjectSort objeto = objGO.GetComponent<ObjectSort>();
 
-        if (socket == null || card == null) return;
+        if (socket == null || objeto == null) return;
 
-        if (card.GetColocada()) return; // if true
+        if (objeto.GetColocada()) return; // if true
 
         var lvl = levels[nivelActual];
 
@@ -106,20 +93,20 @@ public class SoundsGameManager : MonoBehaviour
             return;
         }
 
-        // Alinea la carta con el socket por si acaso
+        // Alinea el objeto con el socket por si acaso
         var attach = socket.attachTransform != null ? socket.attachTransform : socket.transform;
-        card.AlinearEn(attach);
+        objeto.AlinearEn(attach);
 
-        bool esCorrecta = (card.GetIDCard() == lvl.nivelX[idx]);
-        card.SetCorrecta(esCorrecta);
+        bool esCorrecta = (objeto.GetIDCard() == lvl.nivelX[idx]);
+        objeto.SetCorrecta(esCorrecta);
 
         if (esCorrecta)
         {
-            card.BloquearEncontrada();
+            objeto.BloquearEncontrada();
         }
         else
         {
-            card.BloquearErronea();
+            objeto.BloquearErronea();
         }
 
         socket.allowHover = false;
@@ -131,7 +118,7 @@ public class SoundsGameManager : MonoBehaviour
             NivelTerminado();
         }
 
-        texto.text = $"Si detecto la carta {card.GetIDCard()}, colocada: {card.GetColocada()}, correcta: {card.GetCorrecta()}";
+        texto.text = $"Si detecto el objeto {objeto.GetIDCard()}, colocada: {objeto.GetColocada()}, correcta: {objeto.GetCorrecta()}";
     }
 
     public void NivelTerminado()
@@ -139,9 +126,9 @@ public class SoundsGameManager : MonoBehaviour
         // Desactiva los sockets por si no se hubiesen desactivado
         foreach (var s in levels[nivelActual].sockets)
         {
-            if (s) 
-            { 
-                s.allowHover = false; 
+            if (s)
+            {
+                s.allowHover = false;
                 s.allowSelect = false;
             }
         }
@@ -161,8 +148,6 @@ public class SoundsGameManager : MonoBehaviour
         {
             JuegoTerminado();
         }
-
-
     }
 
     public void JuegoTerminado()
@@ -170,4 +155,5 @@ public class SoundsGameManager : MonoBehaviour
         Debug.Log("Juego terminado");
         texto.text = "Juego terminado";
     }
+
 }

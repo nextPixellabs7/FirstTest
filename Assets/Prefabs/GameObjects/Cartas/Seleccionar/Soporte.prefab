@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6483757611658515081}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.83, y: 0.033779033, z: -0.043455746}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.68, y: -0.003, z: -0.043455746}
   m_LocalScale: {x: 1, y: 2.8149195, z: 14.98487}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7883040034555399926}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &7429843279342745704
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8182806698953455535}
   - component: {fileID: 7970355252696865439}
   - component: {fileID: 3059914503025961257}
+  - component: {fileID: 6623867577853680273}
   m_Layer: 0
   m_Name: Soporte
   m_TagString: Untagged
@@ -142,8 +143,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 1, z: 1}
-  m_Center: {x: -1.5, y: 0, z: 0}
+  m_Size: {x: 4.6294694, y: 1.1240724, z: 1}
+  m_Center: {x: 2.7181292, y: -0.06203644, z: 0}
 --- !u!114 &3059914503025961257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 2
+    m_Bits: 0
   m_Handedness: 0
   m_AttachTransform: {fileID: 7016641425862336240}
   m_KeepSelectedTargetValid: 1
@@ -192,8 +193,10 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 0}
-  m_InteractableCantHoverMeshMaterial: {fileID: 0}
+  m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 4fdd32589f4f2424e9fa07329b8cb606,
+    type: 2}
+  m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: b9e96f2895e6bec43829327e54ae9b45,
+    type: 2}
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
@@ -202,3 +205,25 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!64 &6623867577853680273
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429843279342745704}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}

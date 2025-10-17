@@ -9,6 +9,8 @@ public class SoundCardFather : MonoBehaviour
     [SerializeField] private bool correcta;
     [SerializeField] bool colocada;
 
+
+
     // Componentes
     Rigidbody rb;
     Collider col;

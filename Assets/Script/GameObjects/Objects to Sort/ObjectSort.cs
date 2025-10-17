@@ -37,45 +37,19 @@ public class ObjectSort : MonoBehaviour
 
     public void BloquearEncontrada()
     {
-        correcta = true;
-        colocada = true;
-
-        if (rb)
-        {
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.useGravity = false;
-            rb.isKinematic = true;
-            rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
-        }
-
-        if (col)
-        {
-            col.enabled = true;        
-            col.isTrigger = false;     
-        }
-
-        var grab = GetComponent<XRGrabInteractable>();
-        if (grab) grab.enabled = false;
-
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.useGravity = false;
+        rb.isKinematic = true; 
+        rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
     }
 
     public void BloquearErronea()
     {
-        if (rb)
-        {
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.useGravity = false;
-            rb.isKinematic = true;
-            rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
-        }
-
-        if (col)
-        {
-            col.enabled = true;
-            col.isTrigger = false;
-        }
+        correcta = false;
+        colocada = true;
+        if (rb) rb.useGravity = false;
+        if (rb) rb.isKinematic = true;
 
         var grab = GetComponent<XRGrabInteractable>();
         if (grab) grab.enabled = false;

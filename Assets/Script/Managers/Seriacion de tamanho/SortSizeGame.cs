@@ -152,7 +152,6 @@ public class SortSizeGame : MonoBehaviour
 
     public void JuegoTerminado()
     {
-        Debug.Log("Juego terminado");
         texto.text = "Juego terminado";
     }
 

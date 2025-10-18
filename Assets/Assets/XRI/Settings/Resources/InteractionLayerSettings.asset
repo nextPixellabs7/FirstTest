@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LayerNames:
   - Default
-  - CardActive
-  - CardInHand
+  - Card
+  - Hands
   - Nivel1
   - Nivel2
   - Nivel3

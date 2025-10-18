@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8481461175125408010
+--- !u!1001 &8127812942253358007
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -12,7 +12,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 457cd533b2936df4886d4c6ab9e808ad,
+      objectReference: {fileID: 21300000, guid: 23778c0736f991542bcbfcea2275350b,
         type: 3}
     - target: {fileID: 888264112498157599, guid: f684e65778e533b40b4fece3bbc60c91,
         type: 3}
@@ -29,30 +29,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
-    - target: {fileID: 6050556180482290774, guid: f684e65778e533b40b4fece3bbc60c91,
+    - target: {fileID: 4161747889428455597, guid: f684e65778e533b40b4fece3bbc60c91,
         type: 3}
-      propertyPath: m_Name
-      value: Reverso
+      propertyPath: parId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4606989040950755553, guid: f684e65778e533b40b4fece3bbc60c91,
+        type: 3}
+      propertyPath: parId
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7457349464408327201, guid: f684e65778e533b40b4fece3bbc60c91,
         type: 3}
       propertyPath: m_Name
-      value: Carta Conejo
+      value: Carta Pato
       objectReference: {fileID: 0}
     - target: {fileID: 7944784019783036664, guid: f684e65778e533b40b4fece3bbc60c91,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.442
+      value: -7.0736003
       objectReference: {fileID: 0}
     - target: {fileID: 7944784019783036664, guid: f684e65778e533b40b4fece3bbc60c91,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.18090004
+      value: -0.45353997
       objectReference: {fileID: 0}
     - target: {fileID: 7944784019783036664, guid: f684e65778e533b40b4fece3bbc60c91,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.4093499
+      value: 4.4368
       objectReference: {fileID: 0}
     - target: {fileID: 7944784019783036664, guid: f684e65778e533b40b4fece3bbc60c91,
         type: 3}
@@ -89,54 +94,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4606989040950755553, guid: f684e65778e533b40b4fece3bbc60c91, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7457349464408327201, guid: f684e65778e533b40b4fece3bbc60c91,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -6526512790087351879}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f684e65778e533b40b4fece3bbc60c91, type: 3}
---- !u!1 &1353868057627327787 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7457349464408327201, guid: f684e65778e533b40b4fece3bbc60c91,
-    type: 3}
-  m_PrefabInstance: {fileID: 8481461175125408010}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-6526512790087351879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353868057627327787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6630f3a9c2216b646aec261524fc7e5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BunnyCard
-  grab: {fileID: 3301010587685812598}
-  layerActive:
-    m_Bits: 2
-  layerInHand:
-    m_Bits: 4
-  id: 0
-  correcta: 0
-  flipAxis: 2
-  faceToleranceDeg: 12
-  DuracionGiro: 0.25
-  faceDownAngle: 0
-  faceUpAngle: 180
---- !u!114 &3301010587685812598 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6375900405637644412, guid: f684e65778e533b40b4fece3bbc60c91,
-    type: 3}
-  m_PrefabInstance: {fileID: 8481461175125408010}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353868057627327787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable

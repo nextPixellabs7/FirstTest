@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Escenas/Parejas.unity
+    guid: be88d6e5fccf50c41a62f2d0f8831612
+  - enabled: 1
+    path: Assets/Escenas/Pompones.unity
+    guid: cbfb731a0176de14da3dd4bc7b64b6b6
+  - enabled: 1
+    path: Assets/Escenas/Ordenar.unity
+    guid: e666ce43918ae7942ac23370a3375007
+  - enabled: 1
     path: Assets/Escenas/SonidosyCartas.unity
     guid: 921e11e58e7c78a46a84d06b7d763493
   m_configObjects:

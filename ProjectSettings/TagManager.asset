@@ -12,6 +12,8 @@ TagManager:
   - Nivel1
   - Nivel2
   - Nivel3
+  - CanastaChica
+  - CanastaGrande
   layers:
   - Default
   - TransparentFX

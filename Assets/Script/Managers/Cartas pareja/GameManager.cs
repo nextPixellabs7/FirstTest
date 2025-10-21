@@ -3,9 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.XR.CoreUtils;
+using UnityEngine.SceneManagement; // Necesario para cargar escenas
 
 public class GameManager : MonoBehaviour
 {
+    // --- NUEVAS VARIABLES DE TRANSICIÓN Y PROGRESO ---
+    [Header("Progreso y Transición")]
+    [SerializeField] private int currentLevelID = 1; // ID del nivel actual (¡ASIGNA ESTO EN EL INSPECTOR!)
+    [SerializeField] private string mapSceneName = "MapScene"; // Nombre de la escena del mapa
+    [SerializeField] private float endDelaySeconds = 5.0f; // 5 segundos de espera
+    private const string PROGRESS_KEY = "HighestUnlockedLevel";
+    // --------------------------------------------------
+
     [Header("Spawn inicial del jugador")]
     [SerializeField] private Transform startSpawnPoint;
 
@@ -34,6 +43,12 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        // Asegurar que solo haya una instancia
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
 
         // Tepea el jugador a la posicion inicial donde debe aparecer
@@ -83,6 +98,8 @@ public class GameManager : MonoBehaviour
         if (reveladas.Contains(card)) return;
 
         reveladas.Add(card);
+        card.Flip(true, snapHome: false); // Asumimos que la carta se voltea aquí
+
         if (reveladas.Count == 2)
             StartCoroutine(ResolvePair());
     }
@@ -95,6 +112,9 @@ public class GameManager : MonoBehaviour
         var a = reveladas[0];
         var b = reveladas[1];
 
+        // Volteo de la segunda carta (si aún no se ha volteado en NotifyReveal)
+        // Ya que Card.OnGrab llama a Flip(true) antes de NotifyReveal, no se necesita aquí.
+
         if (a.PairId == b.PairId && a != b)
         {
             a.SetMatched(true);
@@ -106,7 +126,7 @@ public class GameManager : MonoBehaviour
 
             if (parejasEncontradas >= totalPairs)
             {
-                EndGame(true);
+                EndGame(true); // Gana
                 yield break;
             }
         }
@@ -123,12 +143,54 @@ public class GameManager : MonoBehaviour
         inputLocked = false;
     }
 
+    // FUNCIÓN MODIFICADA
     private void EndGame(bool win)
     {
+        if (gameOver) return;
+
         gameOver = true;
         inputLocked = true;
+
         if (statusText)
             statusText.SetText(win ? "¡Ganaste!" : "¡Tiempo agotado!");
+
+        // Si se ganó el nivel, guardar el progreso.
+        if (win)
+        {
+            SaveLevelProgress();
+        }
+
+        // Inicia la cuenta regresiva para la transición (Gane o Pierda)
+        StartCoroutine(TransitionToProgressSceneRoutine());
+    }
+
+    // FUNCIÓN NUEVA: Guarda el avance
+    private void SaveLevelProgress()
+    {
+        // El siguiente nivel a desbloquear
+        int nextLevelToUnlock = currentLevelID + 1;
+
+        // Obtener el progreso guardado (si no existe, se inicializa en 1)
+        int highestUnlocked = PlayerPrefs.GetInt(PROGRESS_KEY, 1);
+
+        // Actualizar el progreso solo si este nivel es el más avanzado
+        if (nextLevelToUnlock > highestUnlocked)
+        {
+            PlayerPrefs.SetInt(PROGRESS_KEY, nextLevelToUnlock);
+            PlayerPrefs.Save();
+        }
+    }
+
+    // FUNCIÓN NUEVA: Pausa de 5 segundos y transición
+    private IEnumerator TransitionToProgressSceneRoutine()
+    {
+        Debug.Log($"Transicionando al mapa en {endDelaySeconds} segundos...");
+
+        // Pausa de 5 segundos
+        yield return new WaitForSeconds(endDelaySeconds);
+
+        // Cambiar a la escena del mapa
+        UnityEngine.SceneManagement.SceneManager.LoadScene(mapSceneName);
     }
 
     public bool CanInteract(Card card)

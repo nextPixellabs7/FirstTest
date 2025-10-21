@@ -205,13 +205,13 @@ MonoBehaviour:
       - m_Target: {fileID: 595811700}
         m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
         m_MethodName: GoToScene
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ProgressBar
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &79314449
@@ -369,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 1309123452553434622, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.62
+      value: 2.7276201
       objectReference: {fileID: 0}
     - target: {fileID: 1309123452553434622, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
@@ -379,7 +379,7 @@ PrefabInstance:
     - target: {fileID: 1309123452553434622, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.081
+      value: 12.277943
       objectReference: {fileID: 0}
     - target: {fileID: 1309123452553434622, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
@@ -793,7 +793,7 @@ Transform:
   m_GameObject: {fileID: 516731088}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -2.23, y: 4.073, z: 7.978}
+  m_LocalPosition: {x: 3.11762, y: 4.073, z: 17.174942}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1156,7 +1156,7 @@ PrefabInstance:
     - target: {fileID: 3471565204444744761, guid: 42432ce8dcc5b9149ba51d006b109427,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5276203
+      value: 2.82
       objectReference: {fileID: 0}
     - target: {fileID: 3471565204444744761, guid: 42432ce8dcc5b9149ba51d006b109427,
         type: 3}
@@ -1166,7 +1166,7 @@ PrefabInstance:
     - target: {fileID: 3471565204444744761, guid: 42432ce8dcc5b9149ba51d006b109427,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.313058
+      value: 14.51
       objectReference: {fileID: 0}
     - target: {fileID: 3471565204444744761, guid: 42432ce8dcc5b9149ba51d006b109427,
         type: 3}
@@ -1252,7 +1252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeScreen
   fadeOnStart: 1
-  fadeDuration: 2
+  fadeDuration: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!64 &1912949307
 MeshCollider:
@@ -1438,7 +1438,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970229237}
   m_LocalRotation: {x: -0, y: 0.9999999, z: -0, w: 0.0005746839}
-  m_LocalPosition: {x: 0, y: 0, z: 6.27}
+  m_LocalPosition: {x: 0, y: 0, z: 15.466942}
   m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1448,7 +1448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 179.934, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -2.521, y: 2.914}
+  m_AnchoredPosition: {x: 2.82662, y: 2.914}
   m_SizeDelta: {x: 979.8088, y: 588.897}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970229242

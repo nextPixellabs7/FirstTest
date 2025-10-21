@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [Header("Jugador")]
     [SerializeField] XROrigin playerRig;
 
-
+    // Singleton
     public static GameManager Instance { get; private set; }
 
     [Header("UI")]

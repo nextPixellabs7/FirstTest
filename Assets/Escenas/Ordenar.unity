@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 89133474}
   - component: {fileID: 89133473}
   m_Layer: 0
-  m_Name: Chico a grande
+  m_Name: Grande a chico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "M\xE1s peque\xF1o al m\xE1s grande"
+  m_text: "M\xE1s grande al m\xE1s peque\xF1o"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -811,7 +811,7 @@ GameObject:
   - component: {fileID: 1048171221}
   - component: {fileID: 1048171220}
   m_Layer: 0
-  m_Name: Grande a chico
+  m_Name: Chico a grande
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -856,7 +856,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "M\xE1s grande al m\xE1s peque\xF1o"
+  m_text: "M\xE1s peque\xF1o al m\xE1s grande"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

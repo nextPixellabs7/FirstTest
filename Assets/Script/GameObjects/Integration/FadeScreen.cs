@@ -12,6 +12,7 @@ public class FadeScreen : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
+        Debug.Log("FadeScreen Start ejecutado. ¿FadeOnStart es " + fadeOnStart + "?");
         if (fadeOnStart)
         {
             FadeIn();

@@ -410,6 +410,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 101090610}
     m_Modifications:
+    - target: {fileID: 2858715352627455697, guid: 5e1e2feb1ffe18441a7c048f1489adc5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3452805222190599522, guid: 5e1e2feb1ffe18441a7c048f1489adc5,
         type: 3}
       propertyPath: id
@@ -465,10 +470,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6309914378897711434, guid: 5e1e2feb1ffe18441a7c048f1489adc5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224466403571208465, guid: 5e1e2feb1ffe18441a7c048f1489adc5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8280437121195119989, guid: 5e1e2feb1ffe18441a7c048f1489adc5,
         type: 3}
       propertyPath: m_Name
       value: Carta mariposa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280437121195119989, guid: 5e1e2feb1ffe18441a7c048f1489adc5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -850,10 +870,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1221950343085389870, guid: 8fc6ef0451a08c242a1736c04b833917,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5022369674015198090, guid: 8fc6ef0451a08c242a1736c04b833917,
         type: 3}
       propertyPath: m_Name
       value: Carta caballo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022369674015198090, guid: 8fc6ef0451a08c242a1736c04b833917,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5242623335569349286, guid: 8fc6ef0451a08c242a1736c04b833917,
         type: 3}
@@ -864,6 +894,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988515102004793326, guid: 8fc6ef0451a08c242a1736c04b833917,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973928035460726709, guid: 8fc6ef0451a08c242a1736c04b833917,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -982,6 +1022,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carta gusano
       objectReference: {fileID: 0}
+    - target: {fileID: 290482725011366435, guid: 36fef7a832b0bbc4490b2db4214ed0b5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342195996140021319, guid: 36fef7a832b0bbc4490b2db4214ed0b5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410363122514155036, guid: 36fef7a832b0bbc4490b2db4214ed0b5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5137655479688571647, guid: 36fef7a832b0bbc4490b2db4214ed0b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1030,6 +1085,11 @@ PrefabInstance:
     - target: {fileID: 5137655479688571647, guid: 36fef7a832b0bbc4490b2db4214ed0b5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858681432681681287, guid: 36fef7a832b0bbc4490b2db4214ed0b5,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6415608296974285364, guid: 36fef7a832b0bbc4490b2db4214ed0b5,
@@ -1290,10 +1350,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 101090610}
     m_Modifications:
+    - target: {fileID: 1369199537416673209, guid: c6913193ad5c343468323fb2b5cbd235,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365370437335082978, guid: c6913193ad5c343468323fb2b5cbd235,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3925744398016537478, guid: c6913193ad5c343468323fb2b5cbd235,
         type: 3}
       propertyPath: m_Name
       value: Carta elefante
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925744398016537478, guid: c6913193ad5c343468323fb2b5cbd235,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150938287553302562, guid: c6913193ad5c343468323fb2b5cbd235,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8448636030094732122, guid: c6913193ad5c343468323fb2b5cbd235,
         type: 3}
@@ -1445,7 +1525,7 @@ MonoBehaviour:
     - {fileID: 1794302746}
     - {fileID: 942175002}
     - {fileID: 1620235139}
-    spawnPoint: {fileID: 1818598204}
+    spawnPoint: {fileID: 1845418545}
     colocadas: 0
     audioSource: {fileID: 244916686}
   - sockets:
@@ -1472,6 +1552,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1727925604}
     m_Modifications:
+    - target: {fileID: 872774985424339862, guid: 0b8789e65ce39fd468b454c0b68081c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1713136824497903326, guid: 0b8789e65ce39fd468b454c0b68081c9,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
@@ -1481,6 +1566,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Carta leon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924383272519895026, guid: 0b8789e65ce39fd468b454c0b68081c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598065686854005709, guid: 0b8789e65ce39fd468b454c0b68081c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760947956435596374, guid: 0b8789e65ce39fd468b454c0b68081c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6480774886093295406, guid: 0b8789e65ce39fd468b454c0b68081c9,
         type: 3}
@@ -1563,15 +1663,35 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1727925604}
     m_Modifications:
+    - target: {fileID: 1369199537416673209, guid: c6913193ad5c343468323fb2b5cbd235,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2365370437335082978, guid: c6913193ad5c343468323fb2b5cbd235,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3925744398016537478, guid: c6913193ad5c343468323fb2b5cbd235,
         type: 3}
       propertyPath: m_Name
       value: Carta elefante
       objectReference: {fileID: 0}
+    - target: {fileID: 3925744398016537478, guid: c6913193ad5c343468323fb2b5cbd235,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4254084178688570026, guid: c6913193ad5c343468323fb2b5cbd235,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150938287553302562, guid: c6913193ad5c343468323fb2b5cbd235,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8448636030094732122, guid: c6913193ad5c343468323fb2b5cbd235,
         type: 3}
@@ -1926,6 +2046,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 17907322}
     m_Modifications:
+    - target: {fileID: 700489118572785720, guid: 0f976f9688361f846b7ce09a96e5485b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2427853171876451627, guid: 0f976f9688361f846b7ce09a96e5485b,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
@@ -1935,6 +2060,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Carta vaca
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225693504149013511, guid: 0f976f9688361f846b7ce09a96e5485b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209607246176731235, guid: 0f976f9688361f846b7ce09a96e5485b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8036507685644651739, guid: 0f976f9688361f846b7ce09a96e5485b,
         type: 3}
@@ -1994,6 +2129,11 @@ PrefabInstance:
     - target: {fileID: 8036507685644651739, guid: 0f976f9688361f846b7ce09a96e5485b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756617127245248419, guid: 0f976f9688361f846b7ce09a96e5485b,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2082,10 +2222,30 @@ PrefabInstance:
       propertyPath: id
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4592213982955576094, guid: 5bff588f43d6c1942965db7e766b14d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730744269407607941, guid: 5bff588f43d6c1942965db7e766b14d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7709289061411563706, guid: 5bff588f43d6c1942965db7e766b14d9,
         type: 3}
       propertyPath: m_Name
       value: Carta hormiga
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709289061411563706, guid: 5bff588f43d6c1942965db7e766b14d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958950297274526942, guid: 5bff588f43d6c1942965db7e766b14d9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2517,10 +2677,100 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 47581756104981649, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 71506080823873896, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 276062865006993664, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 353357438131291195, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 374420981655618396, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 431666384201108641, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 431666384289917984, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 431666384384528514, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 431666385858473183, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 535057968534191048, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 536849871830609277, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 650572671260208357, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 837329953043175038, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 890867956315565395, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1034142687725551685, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069031300390132975, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268587132382460848, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1309123452553434621, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
       propertyPath: m_Name
       value: XR Origin Hands (XR Rig)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309123452553434621, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1309123452553434621, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
@@ -2577,10 +2827,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1315418453878831505, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350474952116382727, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1560073814373094524, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
       propertyPath: m_RequestedTrackingOriginMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608296381237002865, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710225877897380118, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1944156310233593726, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
@@ -2722,6 +2992,101 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 46
       objectReference: {fileID: 0}
+    - target: {fileID: 1970795362857394461, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021552615198262483, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2104058611930381618, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2119905738714554174, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465839424921030347, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565154469030639882, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700574068540136901, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838349882613256061, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956749670549624912, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961066550759034597, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042245071325166527, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063561535196178339, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358170388481471216, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610873286366820182, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3815845660983135734, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3836292530090001029, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3954128990016526333, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047868879645207337, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412994023862351271, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4647711162640737530, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2827,15 +3192,125 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 46
       objectReference: {fileID: 0}
+    - target: {fileID: 4684673684976948526, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754779933362752775, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775432160451082587, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924951858774173357, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038613450178393831, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122107376016410824, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5244971741931860303, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441028447042156824, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443914718387608119, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5742351558854144069, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991964835995069885, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332999035555792767, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356609931681018424, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546480660179573127, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698023287892171473, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784267938274873426, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6962209730904998566, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 57
       objectReference: {fileID: 0}
+    - target: {fileID: 7342836345894328960, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7899189671978106697, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027624205376698038, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255305901221525833, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426767609825602531, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757180594537112807, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912846632070864930, guid: 9d79f9fd7501c264eaabcf2287ca1c82,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3154,10 +3629,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carta parajo
       objectReference: {fileID: 0}
+    - target: {fileID: 100571037941345645, guid: 373747818145a614ea79710f0368c71a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 871389821555817537, guid: 373747818145a614ea79710f0368c71a,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715093592650787081, guid: 373747818145a614ea79710f0368c71a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602544924548618578, guid: 373747818145a614ea79710f0368c71a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4765321725748585905, guid: 373747818145a614ea79710f0368c71a,
         type: 3}
@@ -3207,6 +3697,11 @@ PrefabInstance:
     - target: {fileID: 4765321725748585905, guid: 373747818145a614ea79710f0368c71a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6062824850369814217, guid: 373747818145a614ea79710f0368c71a,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3274,10 +3769,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 101090610}
     m_Modifications:
+    - target: {fileID: 334959055689599701, guid: 885ba5623d12ae949b50f8af14e6c1b3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1301103953395437233, guid: 885ba5623d12ae949b50f8af14e6c1b3,
         type: 3}
       propertyPath: m_Name
       value: "Carta ara\xF1a"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301103953395437233, guid: 885ba5623d12ae949b50f8af14e6c1b3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996143281970166414, guid: 885ba5623d12ae949b50f8af14e6c1b3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136431111788199189, guid: 885ba5623d12ae949b50f8af14e6c1b3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5696669352648906406, guid: 885ba5623d12ae949b50f8af14e6c1b3,
         type: 3}
@@ -3365,6 +3880,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 17907322}
     m_Modifications:
+    - target: {fileID: 872774985424339862, guid: 0b8789e65ce39fd468b454c0b68081c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1713136824497903326, guid: 0b8789e65ce39fd468b454c0b68081c9,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
@@ -3374,6 +3894,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Carta leon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924383272519895026, guid: 0b8789e65ce39fd468b454c0b68081c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598065686854005709, guid: 0b8789e65ce39fd468b454c0b68081c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760947956435596374, guid: 0b8789e65ce39fd468b454c0b68081c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6480774886093295406, guid: 0b8789e65ce39fd468b454c0b68081c9,
         type: 3}
@@ -3466,15 +4001,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 17907322}
     m_Modifications:
+    - target: {fileID: 479534761286670102, guid: e40c31d6d04506047bd2afb5683f0f8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2584206718249034537, guid: e40c31d6d04506047bd2afb5683f0f8a,
         type: 3}
       propertyPath: m_Name
       value: Carta gato
       objectReference: {fileID: 0}
+    - target: {fileID: 2584206718249034537, guid: e40c31d6d04506047bd2afb5683f0f8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3363752346591916549, guid: e40c31d6d04506047bd2afb5683f0f8a,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3851846569061607245, guid: e40c31d6d04506047bd2afb5683f0f8a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6960432376895040501, guid: e40c31d6d04506047bd2afb5683f0f8a,
         type: 3}
@@ -3534,6 +4084,11 @@ PrefabInstance:
     - target: {fileID: 6960432376895040501, guid: e40c31d6d04506047bd2afb5683f0f8a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8546360493910184077, guid: e40c31d6d04506047bd2afb5683f0f8a,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3820,6 +4375,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 17907322}
     m_Modifications:
+    - target: {fileID: 724631277081059214, guid: 7484971d2f9dc3e44b9bd65619395936,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2452136270944746141, guid: 7484971d2f9dc3e44b9bd65619395936,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
@@ -3829,6 +4389,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Carta perro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419705790029966257, guid: 7484971d2f9dc3e44b9bd65619395936,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169572488835313621, guid: 7484971d2f9dc3e44b9bd65619395936,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7796190842150495085, guid: 7484971d2f9dc3e44b9bd65619395936,
         type: 3}
@@ -3888,6 +4458,11 @@ PrefabInstance:
     - target: {fileID: 7796190842150495085, guid: 7484971d2f9dc3e44b9bd65619395936,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805394388228151317, guid: 7484971d2f9dc3e44b9bd65619395936,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4204,7 +4779,7 @@ Transform:
   m_GameObject: {fileID: 1845418544}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.158, y: 1.599, z: -3.623}
+  m_LocalPosition: {x: 2.032, y: 1.599, z: -1.574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4254,6 +4829,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1727925604}
     m_Modifications:
+    - target: {fileID: 949397975724270055, guid: ae156cbc5d0e60c408744b2ccf6cc0eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1958601453685906079, guid: ae156cbc5d0e60c408744b2ccf6cc0eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4304,6 +4884,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5675300724449121831, guid: ae156cbc5d0e60c408744b2ccf6cc0eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6131729046146941807, guid: ae156cbc5d0e60c408744b2ccf6cc0eb,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
@@ -4313,6 +4898,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Carta jirafa
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371124160107549251, guid: ae156cbc5d0e60c408744b2ccf6cc0eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012146680912832124, guid: ae156cbc5d0e60c408744b2ccf6cc0eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4704,15 +5299,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3621218437467986111, guid: 7f45eeb36a1b7e1428333032bc34e335,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790780237100916516, guid: 7f45eeb36a1b7e1428333032bc34e335,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7423921462853266203, guid: 7f45eeb36a1b7e1428333032bc34e335,
         type: 3}
       propertyPath: m_Name
       value: Carta oveja
       objectReference: {fileID: 0}
+    - target: {fileID: 7423921462853266203, guid: 7f45eeb36a1b7e1428333032bc34e335,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7671197531456567863, guid: 7f45eeb36a1b7e1428333032bc34e335,
         type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8191873341222842239, guid: 7f45eeb36a1b7e1428333032bc34e335,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

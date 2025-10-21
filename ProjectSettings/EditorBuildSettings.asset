@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Escenas/Parejas.unity
+    path: Assets/Escenas/Actividades/Parejas.unity
     guid: be88d6e5fccf50c41a62f2d0f8831612
   - enabled: 1
-    path: Assets/Escenas/Pompones.unity
+    path: Assets/Escenas/Actividades/Pompones.unity
     guid: cbfb731a0176de14da3dd4bc7b64b6b6
   - enabled: 1
-    path: Assets/Escenas/Ordenar.unity
+    path: Assets/Escenas/Actividades/Ordenar.unity
     guid: e666ce43918ae7942ac23370a3375007
   - enabled: 1
-    path: Assets/Escenas/SonidosYCartas.unity
+    path: Assets/Escenas/Actividades/SonidosYCartas.unity
     guid: 921e11e58e7c78a46a84d06b7d763493
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,

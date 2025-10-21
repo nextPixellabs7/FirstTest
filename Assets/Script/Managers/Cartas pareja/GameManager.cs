@@ -159,11 +159,10 @@ public class GameManager : MonoBehaviour
         if (statusText)
             statusText.SetText(win ? "¡Ganaste!" : "¡Tiempo agotado!");
 
-        // Si se ganó el nivel, guardar el progreso.
-        if (win)
-        {
-            SaveLevelProgress();
-        }
+        // Guardar el progreso.
+        
+        SaveLevelProgress();
+        
 
         // Inicia la cuenta regresiva para la transición (Gane o Pierda)
         StartCoroutine(TransitionToProgressSceneRoutine());
@@ -183,7 +182,7 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt(PROGRESS_KEY, nextLevelToUnlock);
             PlayerPrefs.Save();
-            Debug.Log($"Nivel {currentLevelID} completado. Desbloqueado el Nivel {nextLevelToUnlock}");
+            Debug.Log($"[PROGRESS] Guardando Nivel: {nextLevelToUnlock}");
         }
     }
 

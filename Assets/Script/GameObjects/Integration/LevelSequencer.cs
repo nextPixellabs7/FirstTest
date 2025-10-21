@@ -4,50 +4,83 @@ using UnityEngine.SceneManagement;
 
 public class LevelSequencer : MonoBehaviour
 {
+    private const string PROGRESS_KEY = "HighestUnlockedLevel";
+
     [Header("Referencias")]
-    public FadeScreen fadeScreen; // Arrastra el objeto FadeScreen aqu�
-    public ProgressBarUpdater progressBarUpdater; // Arrastra el script de la barra de progreso aqu�
+    public FadeScreen fadeScreen; 
+    public ProgressBarUpdater progressBarUpdater; 
 
     [Header("Tiempos y Escenas")]
     [Tooltip("Tiempo que la barra se muestra antes de pasar al juego.")]
     public float progressDisplayDuration = 3.0f;
-
-    [Tooltip("Nombre EXACTO del primer nivel.")]
-    public string firstLevelSceneName = "Escenas/Parejas";
+    
+    [Tooltip("Lista ORDENADA de las escenas de nivel. (Elemento 0 = Nivel 1, Elemento 1 = Nivel 2, etc.)")]
+    public string[] LevelSceneNames = new string[]
+    {
+        "Escenas/Actividades/Parejas",       // Nivel 1 (ID 1)
+        "Escenas/Actividades/EscucharYOrdenar", // Nivel 2 (ID 2)
+        "Escenas/Actividades/SonidosYCartas", // Nivel 3 (ID 3)
+        "Escenas/Actividades/Pompones", // Nivel 4 (ID 4)
+        "Escenas/Actividades/Ordena", // Nivel 5 (ID 5)
+        // Puedes añadir más niveles aquí: "Escenas/Pompones", etc.
+    };
 
     void Start()
     {
-        // 1. Mostrar la nueva escena con un FadeIn
-        if (fadeScreen != null)
+        // El Fade In se maneja mejor en el FadeScreen.Start() si 'fadeOnStart' está true.
+        // Si no está funcionando, puedes forzarlo aquí:
+        if (fadeScreen != null && !fadeScreen.fadeOnStart)
         {
-            fadeScreen.FadeIn(); // Asumiendo que FadeScreen.Start() no lo hace si lo llamas aqu�.
-            // Si FadeScreen.fadeOnStart es true, puedes omitir esta l�nea.
+             fadeScreen.FadeIn();
         }
 
-        // 2. Asegurarse de que la barra de progreso se actualice al cargar
+        // Asegurarse de que la barra de progreso se actualice al cargar
         if (progressBarUpdater != null)
         {
             progressBarUpdater.UpdateGlobalProgress();
         }
 
-        // 3. Iniciar la secuencia de espera y carga
-        StartCoroutine(LoadFirstLevelRoutine());
+        // Iniciar la secuencia de espera y carga del siguiente nivel
+        StartCoroutine(LoadNextLevelRoutine());
     }
 
-    private IEnumerator LoadFirstLevelRoutine()
+    private IEnumerator LoadNextLevelRoutine()
     {
-        // 4. Esperar el tiempo de visualizaci�n de la barra
+        // 1. Esperar el tiempo de visualización de la barra
         yield return new WaitForSeconds(progressDisplayDuration);
 
-        // 5. Fade OUT (Oscurecer)
-        if (fadeScreen != null)
-        {
-            fadeScreen.FadeOut();
-            // Esperar a que el FadeOut termine antes de cargar la escena.
-            yield return new WaitForSeconds(fadeScreen.fadeDuration);
-        }
+        // 2. Determinar el nivel a cargar basado en el progreso guardado
+        int nextLevelID = PlayerPrefs.GetInt(PROGRESS_KEY, 1); // Lee el ID del siguiente nivel a jugar
+        
+        // El ID del nivel 1 corresponde al índice 0 del array.
+        int sceneArrayIndex = nextLevelID - 1; 
 
-        // 6. Cargar el primer nivel
-        SceneManager.LoadScene(firstLevelSceneName);
+        // 3. Verificar si hay más niveles en la lista
+        if (sceneArrayIndex >= 0 && sceneArrayIndex < LevelSceneNames.Length)
+        {
+            string sceneToLoad = LevelSceneNames[sceneArrayIndex];
+
+            // 4. Fade OUT y cargar escena
+            if (fadeScreen != null)
+            {
+                fadeScreen.FadeOut();
+                // Esperar a que el FadeOut termine antes de cargar la escena.
+                yield return new WaitForSeconds(fadeScreen.fadeDuration);
+            }
+            
+            SceneManager.LoadScene(sceneToLoad);
+        }
+        else
+        {
+            // 5. Todos los niveles completados (ir al menú o escena de final de juego)
+            Debug.Log("¡Todos los niveles completados! Volviendo al Menú.");
+            if (fadeScreen != null)
+            {
+                fadeScreen.FadeOut();
+                yield return new WaitForSeconds(fadeScreen.fadeDuration);
+            }
+            // Puedes cambiar esto a una escena de "Juego Terminado"
+            SceneManager.LoadScene("Escenas/Menu"); 
+        }
     }
 }

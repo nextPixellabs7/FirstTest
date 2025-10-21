@@ -592,7 +592,7 @@ MonoBehaviour:
   fadeScreen: {fileID: 330957353}
   progressBarUpdater: {fileID: 191080678}
   progressDisplayDuration: 3
-  firstLevelSceneName: Escenas/Parejas
+  firstLevelSceneName: Escenas/Actividades/Parejas
 --- !u!4 &1272341757
 Transform:
   m_ObjectHideFlags: 0

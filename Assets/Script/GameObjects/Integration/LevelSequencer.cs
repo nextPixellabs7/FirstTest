@@ -1,53 +1,91 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelSequencer : MonoBehaviour
 {
     [Header("Referencias")]
-    public FadeScreen fadeScreen; // Arrastra el objeto FadeScreen aqu�
-    public ProgressBarUpdater progressBarUpdater; // Arrastra el script de la barra de progreso aqu�
+    public FadeScreen fadeScreen;
+    public ProgressBarUpdater progressBarUpdater;
+    public TMP_Text countdownText;
 
     [Header("Tiempos y Escenas")]
-    [Tooltip("Tiempo que la barra se muestra antes de pasar al juego.")]
-    public float progressDisplayDuration = 3.0f;
+    [Tooltip("Tiempo que la barra de progreso se muestra.")]
+    public float progressDisplayDuration = 2.0f;
 
-    [Tooltip("Nombre EXACTO del primer nivel.")]
+    [Tooltip("Duración de la cuenta regresiva en segundos.")]
+    public int countdownSeconds = 3;
+
+    [Tooltip("Nombre EXACTO de la escena del nivel a cargar.")]
     public string firstLevelSceneName = "Escenas/Parejas";
 
     void Start()
     {
-        // 1. Mostrar la nueva escena con un FadeIn
-        if (fadeScreen != null)
+        if (countdownText != null)
         {
-            fadeScreen.FadeIn(); // Asumiendo que FadeScreen.Start() no lo hace si lo llamas aqu�.
-            // Si FadeScreen.fadeOnStart es true, puedes omitir esta l�nea.
+            countdownText.gameObject.SetActive(false);
         }
 
-        // 2. Asegurarse de que la barra de progreso se actualice al cargar
+        if (fadeScreen != null)
+        {
+            fadeScreen.FadeIn();
+        }
+
         if (progressBarUpdater != null)
         {
             progressBarUpdater.UpdateGlobalProgress();
         }
 
-        // 3. Iniciar la secuencia de espera y carga
         StartCoroutine(LoadFirstLevelRoutine());
     }
 
     private IEnumerator LoadFirstLevelRoutine()
     {
-        // 4. Esperar el tiempo de visualizaci�n de la barra
+        // 1. Esperar el tiempo de visualización de la barra de progreso.
         yield return new WaitForSeconds(progressDisplayDuration);
 
-        // 5. Fade OUT (Oscurecer)
+        // --- CAMBIO DE LÓGICA ---
+        // 2. OSCURECER la pantalla PRIMERO (Fade Out).
         if (fadeScreen != null)
         {
             fadeScreen.FadeOut();
-            // Esperar a que el FadeOut termine antes de cargar la escena.
+            // Esperar a que la transición termine y la pantalla esté completamente negra.
             yield return new WaitForSeconds(fadeScreen.fadeDuration);
         }
 
-        // 6. Cargar el primer nivel
+        // 3. Ahora que la pantalla está en negro, iniciar la cuenta regresiva.
+        if (countdownText != null)
+        {
+            // Opcional: Ocultar la barra de progreso, ya que no se verá de todos modos.
+            if (progressBarUpdater != null)
+            {
+                progressBarUpdater.gameObject.SetActive(false);
+            }
+            yield return StartCoroutine(CountdownRoutine());
+        }
+        // --- FIN DEL CAMBIO ---
+
+        // 4. Cargar el primer nivel. La nueva escena se encargará de hacer el FadeIn para revelarse.
         SceneManager.LoadScene(firstLevelSceneName);
+    }
+
+    private IEnumerator CountdownRoutine()
+    {
+        // Activa el objeto de texto para que sea visible sobre la pantalla negra.
+        countdownText.gameObject.SetActive(true);
+
+        for (int i = countdownSeconds; i > 0; i--)
+        {
+            countdownText.text = i.ToString();
+            yield return new WaitForSeconds(1f);
+        }
+
+        countdownText.text = "¡Go!";
+        yield return new WaitForSeconds(1f);
+
+        // El texto se puede quedar activo, ya que la escena se destruirá al cargar la siguiente.
+        // Si prefieres, puedes desactivarlo aquí:
+        // countdownText.gameObject.SetActive(false);
     }
 }

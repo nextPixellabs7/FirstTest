@@ -1,8 +1,10 @@
 using NUnit.Framework;
 using System;
+using System.Collections;
 using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
@@ -11,12 +13,15 @@ public class SoundsGameManager : MonoBehaviour
 
     [Header("Spawn inicial del jugador")]
     [SerializeField] private Transform startSpawnPoint;
-
+    /*
     [Header("Texto de prueba")]
-    [SerializeField] TextMeshProUGUI texto;
+    [SerializeField] TextMeshProUGUI texto;*/
 
     [Header("Jugador")]
     [SerializeField] XROrigin playerRig;
+
+    [Header("Clips de audio")]
+    [SerializeField] private AudioClip[] clips;
 
     [Serializable]
     public class level
@@ -34,6 +39,9 @@ public class SoundsGameManager : MonoBehaviour
         public Transform spawnPoint;
 
         [HideInInspector] public int colocadas;
+
+        [Header("Audio del nivel")]
+        public AudioSource audioSource;
     }
 
     [Header("Niveles")]
@@ -49,6 +57,8 @@ public class SoundsGameManager : MonoBehaviour
             playerRig.MoveCameraToWorldLocation(startSpawnPoint.position);
             playerRig.MatchOriginUpCameraForward(startSpawnPoint.up, startSpawnPoint.forward); // opcional, para rotación
         }
+
+        StartCoroutine(ReproducirAudioActual(5));
 
         foreach (level lvl in levels)
         {
@@ -131,7 +141,7 @@ public class SoundsGameManager : MonoBehaviour
             NivelTerminado();
         }
 
-        texto.text = $"Si detecto la carta {card.GetIDCard()}, colocada: {card.GetColocada()}, correcta: {card.GetCorrecta()}";
+        //texto.text = $"Si detecto la carta {card.GetIDCard()}, colocada: {card.GetColocada()}, correcta: {card.GetCorrecta()}";
     }
 
     public void NivelTerminado()
@@ -149,12 +159,13 @@ public class SoundsGameManager : MonoBehaviour
         if (nivelActual + 1 < levels.Length)
         {
             nivelActual++;
-            texto.text = $"Nivel {nivelActual + 1} de {levels.Length}...";
+            //texto.text = $"Nivel {nivelActual + 1} de {levels.Length}...";
 
             var nextSpawn = levels[nivelActual].spawnPoint;
             if (nextSpawn)
             {
                 playerRig.MoveCameraToWorldLocation(nextSpawn.position);
+                StartCoroutine(ReproducirAudioActual(5));
             }
         }
         else
@@ -165,9 +176,19 @@ public class SoundsGameManager : MonoBehaviour
 
     }
 
+    public IEnumerator ReproducirAudioActual(float delay)
+    {
+
+        yield return new WaitForSeconds(delay);
+
+        levels[nivelActual].audioSource.clip = clips[nivelActual];
+        levels[nivelActual].audioSource.Play();
+
+    }
+
     public void JuegoTerminado()
     {
         Debug.Log("Juego terminado");
-        texto.text = "Juego terminado";
+        //texto.text = "Juego terminado";
     }
 }

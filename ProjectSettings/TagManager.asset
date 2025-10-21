@@ -8,7 +8,6 @@ TagManager:
   - Anchor
   - BigPompon
   - SmallPompon
-  - CardSelect
   - Nivel1
   - Nivel2
   - Nivel3
@@ -22,12 +21,12 @@ TagManager:
   - Water
   - UI
   - Card
-  - 
+  - Player
   - Grabbable
   - Hands
   - Teleporter
   - NoHandCollide
-  - 
+  - Board
   - 
   - 
   - 

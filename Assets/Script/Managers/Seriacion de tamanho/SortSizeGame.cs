@@ -65,7 +65,7 @@ public class SortSizeGame : MonoBehaviour
                     continue;
                 }
 
-                s.selectEntered.AddListener(OnSocketSelectEntered);
+                //s.selectEntered.AddListener(OnSocketSelectEntered);
             }
         }
 

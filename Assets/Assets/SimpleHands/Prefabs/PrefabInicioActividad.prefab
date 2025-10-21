@@ -537,6 +537,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+  - component: {fileID: 830063415908855797}
   m_Layer: 0
   m_Name: ControlInicioActividad
   m_TagString: Untagged

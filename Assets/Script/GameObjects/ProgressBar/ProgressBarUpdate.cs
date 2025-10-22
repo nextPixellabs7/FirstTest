@@ -3,14 +3,14 @@ using UnityEngine.UI;
 
 public class ProgressBarUpdater : MonoBehaviour
 {
-    // Clave de guardado que usamos en el GameEnder para saber qué nivel desbloqueado
+    // Clave de guardado que usamos en el GameEnder para saber quï¿½ nivel desbloqueado
     private const string PROGRESS_KEY = "HighestUnlockedLevel";
 
-    // Arrastra el objeto ProgressBar_Fill (con el componente Image) aquí.
+    // Arrastra el objeto ProgressBar_Fill (con el componente Image) aquï¿½.
     // Si adjuntas este script directamente a ProgressBar_Fill, puedes usar GetComponent<Image>().
     public Image fillImage;
 
-    [Header("Configuración del Avance")]
+    [Header("Configuraciï¿½n del Avance")]
     // Total de niveles en tu juego (incluyendo el nivel de inicio/tutorial, si aplica)
     public int totalGameLevels = 5;
 
@@ -27,13 +27,13 @@ public class ProgressBarUpdater : MonoBehaviour
     // Se llama al cargar el mapa para mostrar el avance global
     public void UpdateGlobalProgress()
     {
-        // 1. Obtener el nivel más alto que el jugador ha desbloqueado.
+        // 1. Obtener el nivel mï¿½s alto que el jugador ha desbloqueado.
         // Se inicializa en 1 si es la primera vez que se juega.
         int highestUnlocked = PlayerPrefs.GetInt(PROGRESS_KEY, 1);
 
-        // 2. Calcular cuántos niveles ha completado.
+        // 2. Calcular cuï¿½ntos niveles ha completado.
         // Si highestUnlocked es 3, el jugador ha completado 2 niveles (Nivel 1 y Nivel 2).
-        int levelsCompleted = Mathf.Max(0, highestUnlocked - 1);
+        int levelsCompleted = Mathf.Max(0, highestUnlocked);
 
         // 3. Calcular el valor de progreso (0.0 a 1.0)
         // Ejemplo: 2 niveles completados de 10 totales = 0.2

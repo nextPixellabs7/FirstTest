@@ -11,24 +11,33 @@ public class LevelSequencer : MonoBehaviour
     public ProgressBarUpdater progressBarUpdater; 
 
     [Header("Tiempos y Escenas")]
+    // [ESTA LÍNEA FUE REUBICADA PARA CORREGIR EL ERROR CS0103]
     [Tooltip("Tiempo que la barra se muestra antes de pasar al juego.")]
     public float progressDisplayDuration = 3.0f;
     
     [Tooltip("Lista ORDENADA de las escenas de nivel. (Elemento 0 = Nivel 1, Elemento 1 = Nivel 2, etc.)")]
     public string[] LevelSceneNames = new string[]
     {
-        "Escenas/Actividades/Parejas",       // Nivel 1 (ID 1)
-        "Escenas/Actividades/EscucharYOrdenar", // Nivel 2 (ID 2)
-        "Escenas/Actividades/SonidosYCartas", // Nivel 3 (ID 3)
-        "Escenas/Actividades/Pompones", // Nivel 4 (ID 4)
-        "Escenas/Actividades/Ordena", // Nivel 5 (ID 5)
-        // Puedes añadir más niveles aquí: "Escenas/Pompones", etc.
+        "Escenas/Actividades/Parejas", 
+        "Escenas/Actividades/EscucharYOrdenar", 
+        "Escenas/Actividades/SonidosYCartas", 
+        "Escenas/Actividades/Pompones", 
+        "Escenas/Actividades/Ordenar", 
     };
 
     void Start()
     {
+        // --- CÓDIGO AÑADIDO PARA EL REINICIO EN EL EDITOR ---
+        #if UNITY_EDITOR
+        if (PlayerPrefs.HasKey(PROGRESS_KEY))
+        {
+             PlayerPrefs.DeleteKey(PROGRESS_KEY);
+             Debug.Log("Progreso de simulación reseteado a Nivel 1.");
+        }
+        #endif
+        // --------------------------------------------------
+
         // El Fade In se maneja mejor en el FadeScreen.Start() si 'fadeOnStart' está true.
-        // Si no está funcionando, puedes forzarlo aquí:
         if (fadeScreen != null && !fadeScreen.fadeOnStart)
         {
              fadeScreen.FadeIn();
@@ -79,7 +88,6 @@ public class LevelSequencer : MonoBehaviour
                 fadeScreen.FadeOut();
                 yield return new WaitForSeconds(fadeScreen.fadeDuration);
             }
-            // Puedes cambiar esto a una escena de "Juego Terminado"
             SceneManager.LoadScene("Escenas/Menu"); 
         }
     }

@@ -5,17 +5,24 @@ using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement; // Necesario para la carga de escena
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class SoundsGameManager : MonoBehaviour
 {
+    // --- VARIABLES AÑADIDAS PARA PROGRESO Y TRANSICIÓN ---
+    [Header("Transición y Progreso")]
+    [Tooltip("ID del nivel que esta escena representa (ej: 3 para SonidosYCartas)")]
+    [SerializeField] private int currentLevelID = 3; 
+    [SerializeField] private string mapSceneName = "Escenas/ProgressBar"; 
+    [SerializeField] private float endDelaySeconds = 3.0f; // Pausa después de terminar el nivel
+    public FadeScreen fadeScreen; // ARRASTRA EL FADEPLANE AQUÍ
+    private const string PROGRESS_KEY = "HighestUnlockedLevel";
+    // --------------------------------------------------
 
     [Header("Spawn inicial del jugador")]
     [SerializeField] private Transform startSpawnPoint;
-    /*
-    [Header("Texto de prueba")]
-    [SerializeField] TextMeshProUGUI texto;*/
 
     [Header("Jugador")]
     [SerializeField] XROrigin playerRig;
@@ -55,7 +62,7 @@ public class SoundsGameManager : MonoBehaviour
         if (playerRig != null && startSpawnPoint != null)
         {
             playerRig.MoveCameraToWorldLocation(startSpawnPoint.position);
-            playerRig.MatchOriginUpCameraForward(startSpawnPoint.up, startSpawnPoint.forward); // opcional, para rotaci�n
+            playerRig.MatchOriginUpCameraForward(startSpawnPoint.up, startSpawnPoint.forward); // opcional, para rotación
         }
 
         StartCoroutine(ReproducirAudioActual(5));
@@ -68,7 +75,7 @@ public class SoundsGameManager : MonoBehaviour
                 continue;
             }
 
-            foreach(var s in lvl.sockets)
+            foreach (var s in lvl.sockets)
             {
                 if (s == null)
                 {
@@ -170,10 +177,56 @@ public class SoundsGameManager : MonoBehaviour
         }
         else
         {
+            // --- AQUÍ TERMINAN TODAS LAS ACTIVIDADES DE ESTA ESCENA ---
             JuegoTerminado();
         }
+    }
 
+    // FUNCIÓN MODIFICADA: Ahora guarda el progreso y llama a la transición.
+    public void JuegoTerminado()
+    {
+        Debug.Log("Juego terminado. Iniciando transición al mapa.");
+        
+        // 1. Guardar el progreso (para que se cargue Pompones).
+        SaveLevelProgress(); 
+        
+        // 2. Inicia la pausa y el Fade Out
+        StartCoroutine(TransitionToProgressSceneRoutine());
+    }
 
+    // FUNCIÓN NUEVA: Guarda el avance secuencial
+    private void SaveLevelProgress()
+    {
+        // El siguiente nivel a desbloquear es la ID de esta escena + 1
+        int nextLevelToUnlock = currentLevelID + 1; 
+        int highestUnlocked = PlayerPrefs.GetInt(PROGRESS_KEY, 1);
+
+        if (nextLevelToUnlock > highestUnlocked)
+        {
+            PlayerPrefs.SetInt(PROGRESS_KEY, nextLevelToUnlock);
+            PlayerPrefs.Save();
+            Debug.Log($"[PROGRESS] Nivel {currentLevelID} completado. Guardando para Nivel {nextLevelToUnlock}");
+        }
+    }
+
+    // FUNCIÓN NUEVA: Pausa, Fade Out y transición
+    private IEnumerator TransitionToProgressSceneRoutine()
+    {
+        Debug.Log($"Transicionando al mapa en {endDelaySeconds} segundos...");
+
+        // 1. Pausa de X segundos para que el jugador asimile que terminó
+        yield return new WaitForSeconds(endDelaySeconds);
+
+        // 2. Ejecutar Fade Out (oscurecer la pantalla)
+        if (fadeScreen != null)
+        {
+            fadeScreen.FadeOut();
+            // Esperar la duración del Fade Out
+            yield return new WaitForSeconds(fadeScreen.fadeDuration);
+        }
+
+        // 3. Cambiar a la escena del mapa
+        UnityEngine.SceneManagement.SceneManager.LoadScene(mapSceneName);
     }
 
     public IEnumerator ReproducirAudioActual(float delay)
@@ -184,11 +237,5 @@ public class SoundsGameManager : MonoBehaviour
         levels[nivelActual].audioSource.clip = clips[nivelActual];
         levels[nivelActual].audioSource.Play();
 
-    }
-
-    public void JuegoTerminado()
-    {
-        Debug.Log("Juego terminado");
-        //texto.text = "Juego terminado";
     }
 }

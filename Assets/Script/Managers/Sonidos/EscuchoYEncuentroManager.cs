@@ -1,59 +1,62 @@
-using System;
 using System.Collections;
 using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement; // Necesario para la carga de escena
 
 public class EscuchoYEncuentroManager : MonoBehaviour
 {
+    // --- VARIABLES A√ëADIDAS PARA PROGRESO Y TRANSICI√ìN ---
+    [Header("Transici√≥n y Progreso")]
+    [Tooltip("El ID de este nivel. (Debe ser 2)")]
+    [SerializeField] private int currentLevelID = 2; 
+    [SerializeField] private string mapSceneName = "Escenas/ProgressBar"; 
+    [SerializeField] private float endDelaySeconds = 3.0f; // Pausa despu√©s de terminar el nivel
+    public FadeScreen fadeScreen; // Arrastra el FadePlane aqu√≠
+    private const string PROGRESS_KEY = "HighestUnlockedLevel";
+    // --------------------------------------------------
+    
     [Header("Spawn inicial del jugador")]
     [SerializeField] private Transform startSpawnPoint;
-
-    //[Header("Texto de prueba")]
-    //[SerializeField] TextMeshProUGUI texto;
 
     [Header("Jugador")]
     [SerializeField] XROrigin playerRig;
 
-
     public GameObject[] panelesPalabras; // Array con los paneles de cada palabra
-    public AudioSource audioSource;      // AudioSource para reproducir sonidos
-    public AudioClip[] clipsAudio;       // Clips de audio para cada palabra
+    public AudioSource audioSource; 
+    public AudioClip[] clipsAudio; 
 
     public int indiceActual = 0;
 
     private Coroutine reproducirRutina;
 
+
     private void Awake()
     {
-        // Tepea el jugador a la posicion inicial donde debe aparecer
+        // Tepea el jugador a la posicion inicial
         if (playerRig != null && startSpawnPoint != null)
         {
             playerRig.MoveCameraToWorldLocation(startSpawnPoint.position);
-            playerRig.MatchOriginUpCameraForward(startSpawnPoint.up, startSpawnPoint.forward); // opcional, para rotaciÛn
+            playerRig.MatchOriginUpCameraForward(startSpawnPoint.up, startSpawnPoint.forward); 
         }
     }
 
     void Start()
     {
-        //level lvl = levels[nivelActual];
-
-        // Mostrar solo el primer panel y ocultar el resto
+        // ... (Tu l√≥gica de inicio)
         for (int i = 0; i < panelesPalabras.Length; i++)
         {
-            
             panelesPalabras[i].SetActive(i == 0);
         }
         StartCoroutine(ReproducirAudioActual(5));
     }
 
-    // MÈtodo que se llama desde los botones de opciones con el par·metro del Ìndice elegido
+    // M√©todo que se llama desde los botones de opciones
     public void SeleccionarOpcion(bool esCorrecta)
     {
         if (esCorrecta)
         {
-            // OpciÛn correcta: desactivar panel actual y avanzar al siguiente
+            // Opci√≥n correcta: desactivar panel actual y avanzar al siguiente
             panelesPalabras[indiceActual].SetActive(false);
             indiceActual++;
 
@@ -64,22 +67,64 @@ public class EscuchoYEncuentroManager : MonoBehaviour
             }
             else
             {
-                // Se terminaron las palabras
-                Debug.Log("Actividad finalizada");
-                // AquÌ puedes poner lÛgica para mostrar resultados o finalizar actividad
+                // --- L√ìGICA DE FIN DE NIVEL INVOCADA AQU√ç ---
+                Debug.Log("Actividad finalizada. Transicionando...");
+                EndLevelSequence();
+                // -------------------------------------------
             }
         }
         else
         {
-            // OpciÛn incorrecta: bloquear botÛn (puede ser manejado en cada botÛn)
-            Debug.Log("OpciÛn incorrecta, el botÛn debe deshabilitarse (handle en UI)");
+            // Opci√≥n incorrecta: Bloqueo/L√≥gica de intento fallido
+            Debug.Log("Opci√≥n incorrecta.");
         }
     }
+
+    // --- NUEVA L√ìGICA DE FIN DE NIVEL Y TRANSICI√ìN ---
+
+    private void EndLevelSequence()
+    {
+        SaveLevelProgress(); 
+        StartCoroutine(TransitionToMapRoutine());
+    }
+
+    private void SaveLevelProgress()
+    {
+        // Guardamos el siguiente nivel a desbloquear (CurrentLevelID + 1)
+        int nextLevelToUnlock = currentLevelID + 1;
+        int highestUnlocked = PlayerPrefs.GetInt(PROGRESS_KEY, 1);
+
+        if (nextLevelToUnlock > highestUnlocked)
+        {
+            PlayerPrefs.SetInt(PROGRESS_KEY, nextLevelToUnlock);
+            PlayerPrefs.Save();
+            Debug.Log($"[PROGRESS] Nivel {currentLevelID} completado. Siguiente desbloqueado: {nextLevelToUnlock}");
+        }
+    }
+
+    private IEnumerator TransitionToMapRoutine()
+    {
+        // 1. Pausa antes del Fade Out para que el jugador vea el panel final
+        yield return new WaitForSeconds(endDelaySeconds); 
+
+        // 2. Fade OUT (oscurecer la pantalla)
+        if (fadeScreen != null)
+        {
+            fadeScreen.FadeOut();
+            // Esperar la duraci√≥n del Fade Out antes de cargar la escena
+            yield return new WaitForSeconds(fadeScreen.fadeDuration);
+        }
+
+        // 3. Cambiar a la escena de la barra de progreso
+        SceneManager.LoadScene(mapSceneName);
+    }
+
+    // --- FIN NUEVA L√ìGICA ---
+
 
     // Reproducir el audio de la palabra actual
     public IEnumerator ReproducirAudioActual(float delay)
     {
-
         if (delay > 0)
         {
             yield return new WaitForSeconds(delay);
@@ -92,4 +137,3 @@ public class EscuchoYEncuentroManager : MonoBehaviour
         }
     }
 }
-

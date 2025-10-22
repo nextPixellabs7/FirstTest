@@ -84,8 +84,6 @@ public class LevelSequencer : MonoBehaviour
         countdownText.text = "¡Go!";
         yield return new WaitForSeconds(1f);
 
-        // El texto se puede quedar activo, ya que la escena se destruirá al cargar la siguiente.
-        // Si prefieres, puedes desactivarlo aquí:
-        // countdownText.gameObject.SetActive(false);
+        countdownText.gameObject.SetActive(false);
     }
 }

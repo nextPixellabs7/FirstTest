@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   fillImage: {fileID: 191080676}
-  totalGameLevels: 10
+  totalGameLevels: 5
 --- !u!4 &245602831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 657184242118504721, guid: d6878e1999eb4b44a9f5a263af86c185,

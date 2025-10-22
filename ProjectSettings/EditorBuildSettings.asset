@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/ProgressBar.unity
     guid: 7a56b79d1aea78b4bb282a51a10a0590
+  - enabled: 1
+    path: Assets/Escenas/Logo.unity
+    guid: f0c23bb7ee1116c4c9d0c95aa1638607
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

@@ -27,14 +27,9 @@ public class LevelSequencer : MonoBehaviour
 
     void Start()
     {
-        // --- CÓDIGO AÑADIDO PARA EL REINICIO EN EL EDITOR ---
-        #if UNITY_EDITOR
-        if (PlayerPrefs.HasKey(PROGRESS_KEY))
-        {
-             PlayerPrefs.DeleteKey(PROGRESS_KEY);
-             Debug.Log("Progreso de simulación reseteado a Nivel 1.");
-        }
-        #endif
+  
+        //PlayerPrefs.DeleteKey(PROGRESS_KEY);
+
         // --------------------------------------------------
 
         // El Fade In se maneja mejor en el FadeScreen.Start() si 'fadeOnStart' está true.

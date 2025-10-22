@@ -124,7 +124,7 @@ public class LevelSequencer : MonoBehaviour
         }
 
         // Mensaje final breve antes de cargar
-        countdownText.text = "¡Go!";
+        countdownText.text = "¡Vamos!";
         yield return new WaitForSeconds(0.5f); // Pausa más corta
         
         countdownText.gameObject.SetActive(false);

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Imagenes/Countdown.meta
 guid: 3a9e5c51215329b479de3f5dde1db628
+========
+guid: a83a27d8f7da3c9408097d9801afcf99
+>>>>>>>> main:Assets/Sprites/EncontrarParejita.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

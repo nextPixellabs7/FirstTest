@@ -103,4 +103,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3f106a78e1aa142b294d8d1a41114b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GifForUnity::GifImporter.GifPlayer
-  Gif: {fileID: 11400000, guid: 5b2536fad92113345a88f22b282693e1, type: 2}
+  Gif: {fileID: 11400000, guid: b33f2708a5aa0e94fae13af5a1551864, type: 2}

@@ -1227,6 +1227,11 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 4134454}
+    - target: {fileID: 2634284377202305819, guid: 42ed3d0b525265c42bcdd322c332f507,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 3133404369403304260, guid: 42ed3d0b525265c42bcdd322c332f507,
         type: 3}
       propertyPath: m_InteractionManager
@@ -1267,6 +1272,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3603817571226786126, guid: 42ed3d0b525265c42bcdd322c332f507,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4818966074644222268, guid: 42ed3d0b525265c42bcdd322c332f507,
         type: 3}
       propertyPath: m_Name
@@ -1307,6 +1317,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6882056164976422417, guid: 42ed3d0b525265c42bcdd322c332f507,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 7151931933185768131, guid: 42ed3d0b525265c42bcdd322c332f507,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1477,6 +1492,11 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8760938160233905125, guid: 42ed3d0b525265c42bcdd322c332f507,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8800173242990297028, guid: 42ed3d0b525265c42bcdd322c332f507,
         type: 3}
       propertyPath: m_InteractionManager
@@ -1584,6 +1604,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1563105236}
     m_Modifications:
+    - target: {fileID: 198800004796413355, guid: d753a4337c66df549b80461586aae007,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 996719550443604351, guid: d753a4337c66df549b80461586aae007,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 2195320586091824809, guid: d753a4337c66df549b80461586aae007,
         type: 3}
       propertyPath: m_InteractionManager
@@ -1624,6 +1654,11 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2531953374958554707, guid: d753a4337c66df549b80461586aae007,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1559999
+      objectReference: {fileID: 0}
     - target: {fileID: 3075662776880941091, guid: d753a4337c66df549b80461586aae007,
         type: 3}
       propertyPath: m_InteractionManager
@@ -1659,6 +1694,11 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3856446877324652682, guid: d753a4337c66df549b80461586aae007,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 5512149257327169264, guid: d753a4337c66df549b80461586aae007,
         type: 3}
       propertyPath: m_InteractionManager
@@ -1704,11 +1744,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plane_Cubos
       objectReference: {fileID: 0}
+    - target: {fileID: 6086851102677873365, guid: d753a4337c66df549b80461586aae007,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1559999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766422477802026002, guid: d753a4337c66df549b80461586aae007,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7306932746642154399, guid: d753a4337c66df549b80461586aae007,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1559999
+      objectReference: {fileID: 0}
     - target: {fileID: 7550952310278860310, guid: d753a4337c66df549b80461586aae007,
         type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 4134454}
+    - target: {fileID: 7843854476764322647, guid: d753a4337c66df549b80461586aae007,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.156
+      objectReference: {fileID: 0}
     - target: {fileID: 8212374339884075199, guid: d753a4337c66df549b80461586aae007,
         type: 3}
       propertyPath: m_InteractionManager

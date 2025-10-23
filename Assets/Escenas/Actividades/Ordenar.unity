@@ -2347,6 +2347,11 @@ PrefabInstance:
       objectReference: {fileID: 1847060823}
     - target: {fileID: 2142349750761981463, guid: e9407ca871396a44eb4ef01a9b6f17ff,
         type: 3}
+      propertyPath: menuSceneName
+      value: Escenas/Final
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142349750761981463, guid: e9407ca871396a44eb4ef01a9b6f17ff,
+        type: 3}
       propertyPath: startSpawnPoint
       value: 
       objectReference: {fileID: 1305741799}

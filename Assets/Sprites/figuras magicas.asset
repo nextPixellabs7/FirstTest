@@ -160,7 +160,7 @@ MonoBehaviour:
   - DelayInMs: 30
     Sprite: {fileID: 21300000, guid: 420117f6f8892384193fded1c2eae0d7, type: 3}
   - DelayInMs: 40
-    Sprite: {fileID: 21300000, guid: 5915b84a2c9b2714ab4b329afe686946, type: 3}
+    Sprite: {fileID: 0}
   - DelayInMs: 30
     Sprite: {fileID: 21300000, guid: 77963a04d90444d468e3d59743fd622a, type: 3}
   - DelayInMs: 30

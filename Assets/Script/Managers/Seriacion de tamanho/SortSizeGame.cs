@@ -11,7 +11,7 @@ public class SortSizeGame : MonoBehaviour
 {
     // --- VARIABLES AÑADIDAS PARA TRANSICIÓN ---
     [Header("Transición Final")]
-    [SerializeField] private string menuSceneName = "Escenas/Menu"; // Nombre de la escena del menú
+    [SerializeField] private string finalSceneName = "Escenas/Final"; // Nombre de la escena del final 
     [SerializeField] private float endDelaySeconds = 3.0f; // Pausa después de terminar el nivel
     public FadeScreen fadeScreen; // ARRASTRA EL FADEPLANE AQUÍ
     private const string PROGRESS_KEY = "HighestUnlockedLevel";
@@ -179,7 +179,7 @@ public class SortSizeGame : MonoBehaviour
             yield return new WaitForSeconds(fadeScreen.fadeDuration);
         }
 
-        // Cargar la escena del Menú
-        SceneManager.LoadScene(menuSceneName);
+        // Cargar la escena del Final
+        SceneManager.LoadScene(finalSceneName);
     }
 }
